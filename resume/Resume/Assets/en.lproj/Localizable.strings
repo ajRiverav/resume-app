@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  Resume
+
+  Created by AJ Rivera on 12/29/21.
+  
+*/
+
+// Tab titles
+"education" = "Education";
+"experience" = "Experience";
+"contact" = "Contact";

@@ -36,15 +36,15 @@ struct Duration {
 }
 
 enum State {
-    case pr
-    case md
-    case dc
+    case puertoRico
+    case maryland
+    case districtOfColumbia
 
     var name: String {
         switch self {
-        case .pr: return "Puerto Rico"
-        case .md: return "Maryland"
-        case .dc: return "District of Columbia"
+        case .puertoRico: return "Puerto Rico"
+        case .maryland: return "Maryland"
+        case .districtOfColumbia: return "District of Columbia"
         }
     }
 
@@ -52,9 +52,9 @@ enum State {
     // Ref. https://about.usps.com/who-we-are/postal-history/state-abbreviations.htm
     var postalAbbreviation: String {
         switch self {
-        case .pr: return "PR"
-        case .md: return "MD"
-        case .dc: return "DC"
+        case .puertoRico: return "PR"
+        case .maryland: return "MD"
+        case .districtOfColumbia: return "DC"
         }
     }
 }
