@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		217A1176277BB2A0007977CC /* resume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = resume.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		217A1176277BB2A0007977CC /* Resume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Resume.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		217A1179277BB2A0007977CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		217A117B277BB2A0007977CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		217A117D277BB2A0007977CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		217A1177277BB2A0007977CC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				217A1176277BB2A0007977CC /* resume.app */,
+				217A1176277BB2A0007977CC /* Resume.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -92,9 +92,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		217A1175277BB2A0007977CC /* resume */ = {
+		217A1175277BB2A0007977CC /* Resume */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 217A118A277BB2A2007977CC /* Build configuration list for PBXNativeTarget "resume" */;
+			buildConfigurationList = 217A118A277BB2A2007977CC /* Build configuration list for PBXNativeTarget "Resume" */;
 			buildPhases = (
 				217A1193277BBD78007977CC /* ShellScript */,
 				217A1172277BB2A0007977CC /* Sources */,
@@ -105,9 +105,9 @@
 			);
 			dependencies = (
 			);
-			name = resume;
+			name = Resume;
 			productName = resume;
-			productReference = 217A1176277BB2A0007977CC /* resume.app */;
+			productReference = 217A1176277BB2A0007977CC /* Resume.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -138,7 +138,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				217A1175277BB2A0007977CC /* resume */,
+				217A1175277BB2A0007977CC /* Resume */,
 			);
 		};
 /* End PBXProject section */
@@ -335,7 +335,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = resume/Info.plist;
+				INFOPLIST_FILE = Resume/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "AJ's resume";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -365,7 +365,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = resume/Info.plist;
+				INFOPLIST_FILE = Resume/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "AJ's resume";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -399,7 +399,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		217A118A277BB2A2007977CC /* Build configuration list for PBXNativeTarget "resume" */ = {
+		217A118A277BB2A2007977CC /* Build configuration list for PBXNativeTarget "Resume" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				217A118B277BB2A2007977CC /* Debug */,
