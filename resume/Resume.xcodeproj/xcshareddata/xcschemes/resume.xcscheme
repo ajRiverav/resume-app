@@ -17,7 +17,7 @@
                BlueprintIdentifier = "217A1175277BB2A0007977CC"
                BuildableName = "resume.app"
                BlueprintName = "resume"
-               ReferencedContainer = "container:resume.xcodeproj">
+               ReferencedContainer = "container:Resume.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,7 +47,7 @@
             BlueprintIdentifier = "217A1175277BB2A0007977CC"
             BuildableName = "resume.app"
             BlueprintName = "resume"
-            ReferencedContainer = "container:resume.xcodeproj">
+            ReferencedContainer = "container:Resume.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -64,7 +64,7 @@
             BlueprintIdentifier = "217A1175277BB2A0007977CC"
             BuildableName = "resume.app"
             BlueprintName = "resume"
-            ReferencedContainer = "container:resume.xcodeproj">
+            ReferencedContainer = "container:Resume.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
