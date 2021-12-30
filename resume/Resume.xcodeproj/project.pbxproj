@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21210391277E3DB70001D8B8 /* LocalizableString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21210390277E3DB70001D8B8 /* LocalizableString.swift */; };
 		21480F1A277E3340005D2907 /* SectionHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21480F18277E3340005D2907 /* SectionHeaderCell.xib */; };
 		21480F1B277E3340005D2907 /* SectionHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21480F19277E3340005D2907 /* SectionHeaderCell.swift */; };
 		21480F1D277E3704005D2907 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21480F1C277E3704005D2907 /* Icon.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		21210390277E3DB70001D8B8 /* LocalizableString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableString.swift; sourceTree = "<group>"; };
 		21480F18277E3340005D2907 /* SectionHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SectionHeaderCell.xib; sourceTree = "<group>"; };
 		21480F19277E3340005D2907 /* SectionHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionHeaderCell.swift; sourceTree = "<group>"; };
 		21480F1C277E3704005D2907 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				21D396B9277CDC83007ECA78 /* Localizable.strings */,
+				21210390277E3DB70001D8B8 /* LocalizableString.swift */,
 			);
 			path = Strings;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				217A117A277BB2A0007977CC /* AppDelegate.swift in Sources */,
 				21D396B3277CDAF1007ECA78 /* EducationNavController.swift in Sources */,
 				217A117C277BB2A0007977CC /* SceneDelegate.swift in Sources */,
+				21210391277E3DB70001D8B8 /* LocalizableString.swift in Sources */,
 				21D396AF277C8358007ECA78 /* RootCoordinator.swift in Sources */,
 				217A118F277BB6D0007977CC /* Models.swift in Sources */,
 			);
