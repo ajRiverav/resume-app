@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 /// Avoids specifiying images using strings and instead uses an enum which offers compile-time verification.
-enum Icons {
+enum Icon {
     case identificationCard
     case crane
     case maleStudent

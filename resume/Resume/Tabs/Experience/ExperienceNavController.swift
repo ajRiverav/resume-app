@@ -12,6 +12,6 @@ class ExperienceNavController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()       
         setTabBarItemTitle("experience".localized)
-        setTabBarItemImage(Icons.crane.image)
+        setTabBarItemImage(Icon.crane.image)
     }
 }

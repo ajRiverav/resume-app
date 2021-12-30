@@ -12,6 +12,6 @@ class SummaryNavController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setTabBarItemTitle("summary".localized)
-        setTabBarItemImage(Icons.identificationCard.image)
+        setTabBarItemImage(Icon.identificationCard.image)
     }
 }
