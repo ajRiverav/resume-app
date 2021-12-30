@@ -10,7 +10,7 @@ import UIKit
 
 class ExperienceNavController: UINavigationController {
     override func viewDidLoad() {
-        super.viewDidLoad()       
+        super.viewDidLoad()
         setTabBarItemTitle(LocalizableString.experience.localized)
         setTabBarItemImage(Icon.crane.image)
     }

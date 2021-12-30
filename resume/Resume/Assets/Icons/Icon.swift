@@ -13,7 +13,7 @@ enum Icon {
     case identificationCard
     case crane
     case maleStudent
-    
+
     /// Image for the icon
     var image: UIImage? {
         switch self {
@@ -23,7 +23,7 @@ enum Icon {
         case .maleStudent: return UIImage(named: "male student")
         }
     }
-    
+
     /// Some icons require attribution to be use for free.
     var attribution: String? {
         switch self {
@@ -33,7 +33,6 @@ enum Icon {
         }
     }
 }
-
 
 // TODO:
 // id card                                     Icon by <a href="https://freeicons.io/profile/3054">Nine One</a> on <a href="https://freeicons.io">freeicons.io</a>
@@ -45,5 +44,3 @@ enum Icon {
 // diploma                                     Icon by <a href="https://freeicons.io/profile/5790">ColourCreatype</a> on <a href="https://freeicons.io">freeicons.io</a>
 
 // crane                                     Icon by <a href="https://freeicons.io/profile/2257">www.wishforge.games</a> on <a href="https://freeicons.io">freeicons.io</a>
-
-

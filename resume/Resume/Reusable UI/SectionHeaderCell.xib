@@ -55,6 +55,12 @@
                     <constraint firstItem="LFh-Ll-Kjp" firstAttribute="leading" secondItem="gWp-sq-yxO" secondAttribute="trailing" constant="2" id="z4H-NJ-dFE"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="dateSeparator" destination="gWp-sq-yxO" id="FEq-h0-dDn"/>
+                <outlet property="endDate" destination="LFh-Ll-Kjp" id="X7M-2Q-R4T"/>
+                <outlet property="startDate" destination="zZm-Qc-kAV" id="FW3-lZ-P2s"/>
+                <outlet property="title" destination="IUd-Y5-G2A" id="ScT-Sl-7hV"/>
+            </connections>
             <point key="canvasLocation" x="-33.333333333333336" y="8.7053571428571423"/>
         </tableViewCell>
     </objects>

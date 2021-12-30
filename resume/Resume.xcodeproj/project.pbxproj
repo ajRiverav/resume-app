@@ -202,8 +202,8 @@
 		21D396D5277E2C4E007ECA78 /* Reusable UI */ = {
 			isa = PBXGroup;
 			children = (
-				21480F19277E3340005D2907 /* SectionHeaderCell.swift */,
 				21480F18277E3340005D2907 /* SectionHeaderCell.xib */,
+				21480F19277E3340005D2907 /* SectionHeaderCell.swift */,
 			);
 			path = "Reusable UI";
 			sourceTree = "<group>";
@@ -298,7 +298,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint && swiftlint --fix\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
