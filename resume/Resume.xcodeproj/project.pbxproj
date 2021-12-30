@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21480F1A277E3340005D2907 /* SectionHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21480F18277E3340005D2907 /* SectionHeaderCell.xib */; };
+		21480F1B277E3340005D2907 /* SectionHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21480F19277E3340005D2907 /* SectionHeaderCell.swift */; };
+		21480F1D277E3704005D2907 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21480F1C277E3704005D2907 /* Icons.swift */; };
 		217A117A277BB2A0007977CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217A1179277BB2A0007977CC /* AppDelegate.swift */; };
 		217A117C277BB2A0007977CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217A117B277BB2A0007977CC /* SceneDelegate.swift */; };
 		217A117E277BB2A0007977CC /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217A117D277BB2A0007977CC /* MainTabViewController.swift */; };
@@ -20,11 +23,16 @@
 		21D396B3277CDAF1007ECA78 /* EducationNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D396B2277CDAF1007ECA78 /* EducationNavController.swift */; };
 		21D396B7277CDC83007ECA78 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 21D396B9277CDC83007ECA78 /* Localizable.strings */; };
 		21D396BB277CDD5B007ECA78 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D396BA277CDD5B007ECA78 /* String.swift */; };
-		21D396BD277CE889007ECA78 /* ContactNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D396BC277CE889007ECA78 /* ContactNavController.swift */; };
+		21D396BD277CE889007ECA78 /* SummaryNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D396BC277CE889007ECA78 /* SummaryNavController.swift */; };
 		21D396BF277CEA87007ECA78 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D396BE277CEA86007ECA78 /* UINavigationController.swift */; };
+		21D396C5277D0585007ECA78 /* Experience.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21D396C4277D0585007ECA78 /* Experience.storyboard */; };
+		21D396C7277D09E7007ECA78 /* ExperienceRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D396C6277D09E7007ECA78 /* ExperienceRootViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		21480F18277E3340005D2907 /* SectionHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SectionHeaderCell.xib; sourceTree = "<group>"; };
+		21480F19277E3340005D2907 /* SectionHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionHeaderCell.swift; sourceTree = "<group>"; };
+		21480F1C277E3704005D2907 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
 		217A1176277BB2A0007977CC /* Resume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Resume.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		217A1179277BB2A0007977CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		217A117B277BB2A0007977CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,8 +48,10 @@
 		21D396B2277CDAF1007ECA78 /* EducationNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationNavController.swift; sourceTree = "<group>"; };
 		21D396B8277CDC83007ECA78 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		21D396BA277CDD5B007ECA78 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
-		21D396BC277CE889007ECA78 /* ContactNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactNavController.swift; sourceTree = "<group>"; };
+		21D396BC277CE889007ECA78 /* SummaryNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryNavController.swift; sourceTree = "<group>"; };
 		21D396BE277CEA86007ECA78 /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
+		21D396C4277D0585007ECA78 /* Experience.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Experience.storyboard; sourceTree = "<group>"; };
+		21D396C6277D09E7007ECA78 /* ExperienceRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceRootViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +84,9 @@
 		217A1178277BB2A0007977CC /* Resume */ = {
 			isa = PBXGroup;
 			children = (
+				21D396AC277C81A9007ECA78 /* Tab Controller */,
+				21D396C0277D0528007ECA78 /* Tabs */,
+				21D396D5277E2C4E007ECA78 /* Reusable UI */,
 				217A1184277BB2A2007977CC /* LaunchScreen.storyboard */,
 				217A1187277BB2A2007977CC /* Info.plist */,
 				217A1179277BB2A0007977CC /* AppDelegate.swift */,
@@ -81,11 +94,7 @@
 				21D396AD277C834B007ECA78 /* Coordination */,
 				217A1190277BBB37007977CC /* Extensions */,
 				217A118D277BB64E007977CC /* Models */,
-				21D396AC277C81A9007ECA78 /* Tab Controller */,
 				21D396B4277CDC39007ECA78 /* Assets */,
-				21D396B0277CDAD6007ECA78 /* ExperienceNavController.swift */,
-				21D396B2277CDAF1007ECA78 /* EducationNavController.swift */,
-				21D396BC277CE889007ECA78 /* ContactNavController.swift */,
 			);
 			path = Resume;
 			sourceTree = "<group>";
@@ -130,8 +139,54 @@
 			children = (
 				217A1182277BB2A2007977CC /* Icons.xcassets */,
 				21D396B9277CDC83007ECA78 /* Localizable.strings */,
+				21480F1C277E3704005D2907 /* Icons.swift */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		21D396C0277D0528007ECA78 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				21D396C3277D0546007ECA78 /* Summary */,
+				21D396C1277D0533007ECA78 /* Experience */,
+				21D396C2277D053D007ECA78 /* Education */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		21D396C1277D0533007ECA78 /* Experience */ = {
+			isa = PBXGroup;
+			children = (
+				21D396C4277D0585007ECA78 /* Experience.storyboard */,
+				21D396B0277CDAD6007ECA78 /* ExperienceNavController.swift */,
+				21D396C6277D09E7007ECA78 /* ExperienceRootViewController.swift */,
+			);
+			path = Experience;
+			sourceTree = "<group>";
+		};
+		21D396C2277D053D007ECA78 /* Education */ = {
+			isa = PBXGroup;
+			children = (
+				21D396B2277CDAF1007ECA78 /* EducationNavController.swift */,
+			);
+			path = Education;
+			sourceTree = "<group>";
+		};
+		21D396C3277D0546007ECA78 /* Summary */ = {
+			isa = PBXGroup;
+			children = (
+				21D396BC277CE889007ECA78 /* SummaryNavController.swift */,
+			);
+			path = Summary;
+			sourceTree = "<group>";
+		};
+		21D396D5277E2C4E007ECA78 /* Reusable UI */ = {
+			isa = PBXGroup;
+			children = (
+				21480F19277E3340005D2907 /* SectionHeaderCell.swift */,
+				21480F18277E3340005D2907 /* SectionHeaderCell.xib */,
+			);
+			path = "Reusable UI";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +206,8 @@
 			dependencies = (
 			);
 			name = Resume;
+			packageProductDependencies = (
+			);
 			productName = resume;
 			productReference = 217A1176277BB2A0007977CC /* Resume.app */;
 			productType = "com.apple.product-type.application";
@@ -179,6 +236,8 @@
 				Base,
 			);
 			mainGroup = 217A116D277BB2A0007977CC;
+			packageReferences = (
+			);
 			productRefGroup = 217A1177277BB2A0007977CC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -193,7 +252,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21480F1A277E3340005D2907 /* SectionHeaderCell.xib in Resources */,
 				217A1186277BB2A2007977CC /* LaunchScreen.storyboard in Resources */,
+				21D396C5277D0585007ECA78 /* Experience.storyboard in Resources */,
 				21D396B7277CDC83007ECA78 /* Localizable.strings in Resources */,
 				217A1183277BB2A2007977CC /* Icons.xcassets in Resources */,
 				217A1181277BB2A0007977CC /* Main.storyboard in Resources */,
@@ -229,10 +290,13 @@
 			files = (
 				21D396B1277CDAD6007ECA78 /* ExperienceNavController.swift in Sources */,
 				217A117E277BB2A0007977CC /* MainTabViewController.swift in Sources */,
+				21480F1B277E3340005D2907 /* SectionHeaderCell.swift in Sources */,
 				21D396BF277CEA87007ECA78 /* UINavigationController.swift in Sources */,
 				217A1192277BBB46007977CC /* Date.swift in Sources */,
+				21D396C7277D09E7007ECA78 /* ExperienceRootViewController.swift in Sources */,
 				21D396BB277CDD5B007ECA78 /* String.swift in Sources */,
-				21D396BD277CE889007ECA78 /* ContactNavController.swift in Sources */,
+				21480F1D277E3704005D2907 /* Icons.swift in Sources */,
+				21D396BD277CE889007ECA78 /* SummaryNavController.swift in Sources */,
 				217A117A277BB2A0007977CC /* AppDelegate.swift in Sources */,
 				21D396B3277CDAF1007ECA78 /* EducationNavController.swift in Sources */,
 				217A117C277BB2A0007977CC /* SceneDelegate.swift in Sources */,

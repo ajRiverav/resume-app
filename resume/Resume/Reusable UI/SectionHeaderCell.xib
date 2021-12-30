@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Ucg-Qy-CHD" customClass="SectionHeaderCell" customModule="Resume" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ucg-Qy-CHD" id="rpD-ar-YAw">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aug 2019" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZm-Qc-kAV" userLabel="Start Date">
+                        <rect key="frame" x="10" y="10" width="73" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWp-sq-yxO" userLabel="Date Separator">
+                        <rect key="frame" x="85" y="10" width="8" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dec 2020" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFh-Ll-Kjp" userLabel="End Date">
+                        <rect key="frame" x="95" y="10" width="75" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUd-Y5-G2A" userLabel="End Date">
+                        <rect key="frame" x="371" y="10" width="33" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="IUd-Y5-G2A" secondAttribute="bottom" constant="10" id="Bht-wo-fxL"/>
+                    <constraint firstItem="gWp-sq-yxO" firstAttribute="leading" secondItem="zZm-Qc-kAV" secondAttribute="trailing" constant="2" id="GS5-25-tZw"/>
+                    <constraint firstAttribute="bottom" secondItem="zZm-Qc-kAV" secondAttribute="bottom" constant="10" id="GtY-Pe-dCw"/>
+                    <constraint firstItem="zZm-Qc-kAV" firstAttribute="leading" secondItem="rpD-ar-YAw" secondAttribute="leading" constant="10" id="INW-Z2-3md"/>
+                    <constraint firstItem="zZm-Qc-kAV" firstAttribute="top" secondItem="rpD-ar-YAw" secondAttribute="top" constant="10" id="PIP-JZ-kz5"/>
+                    <constraint firstItem="gWp-sq-yxO" firstAttribute="top" secondItem="rpD-ar-YAw" secondAttribute="top" constant="10" id="Q5t-ZQ-b1p"/>
+                    <constraint firstItem="IUd-Y5-G2A" firstAttribute="top" secondItem="rpD-ar-YAw" secondAttribute="top" constant="10" id="R5q-Ca-atu"/>
+                    <constraint firstAttribute="bottom" secondItem="gWp-sq-yxO" secondAttribute="bottom" constant="10" id="Sut-co-5Ff"/>
+                    <constraint firstItem="LFh-Ll-Kjp" firstAttribute="top" secondItem="rpD-ar-YAw" secondAttribute="top" constant="10" id="jIg-EB-lTa"/>
+                    <constraint firstAttribute="trailing" secondItem="IUd-Y5-G2A" secondAttribute="trailing" constant="10" id="sNa-Gm-aGQ"/>
+                    <constraint firstAttribute="bottom" secondItem="LFh-Ll-Kjp" secondAttribute="bottom" constant="10" id="weG-ha-gwI"/>
+                    <constraint firstItem="LFh-Ll-Kjp" firstAttribute="leading" secondItem="gWp-sq-yxO" secondAttribute="trailing" constant="2" id="z4H-NJ-dFE"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="-33.333333333333336" y="8.7053571428571423"/>
+        </tableViewCell>
+    </objects>
+</document>

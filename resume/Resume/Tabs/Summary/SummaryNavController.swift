@@ -8,10 +8,10 @@
 import Foundation
 import UIKit
 
-class ContactNavController: UINavigationController {
+class SummaryNavController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        setTabBarItemTitle("contact".localized)
-        setTabBarItemImage(UIImage(named: "telephone"))
+        setTabBarItemTitle("summary".localized)
+        setTabBarItemImage(Icons.identificationCard.image)
     }
 }

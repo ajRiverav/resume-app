@@ -12,6 +12,6 @@ class EducationNavController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setTabBarItemTitle("education".localized)
-        setTabBarItemImage(UIImage(named: "male student"))
+        setTabBarItemImage(Icons.maleStudent.image)
     }
 }

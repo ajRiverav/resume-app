@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "icons8-call-103.png",
+      "filename" : "10018417921537356030.svg",
       "idiom" : "iphone",
       "scale" : "1x"
     },
     {
-      "filename" : "icons8-call-104.png",
+      "filename" : "10018417921537356030-1.svg",
       "idiom" : "iphone",
       "scale" : "2x"
     },
     {
-      "filename" : "icons8-call-105.png",
+      "filename" : "10018417921537356030-2.svg",
       "idiom" : "iphone",
       "scale" : "3x"
     }
@@ -19,8 +19,5 @@
   "info" : {
     "author" : "xcode",
     "version" : 1
-  },
-  "properties" : {
-    "template-rendering-intent" : "template"
   }
 }
