@@ -8,13 +8,19 @@
 import Foundation
 
 extension Date {
-    // TODO: parameterize date format and locale identifier. They're harccoded for now.
-    var localized: String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale(identifier: Language.english.localeIdentifier)
-        dateFormatter.dateFormat = "dd MMM yyyy"
-        return dateFormatter.string(from: self)
+    enum Format: String {
+        case MMM
+        case yyyy
     }
+
+    // TODO: Idea: overload and use [Format] that way one can call it [.yyyy, .MMM]
+    func formatted(as format: Format,
+                   in language: Language = .english) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = .init(identifier: language.localeIdentifier)
+        dateFormatter.dateFormat = format.rawValue
+        return dateFormatter.string(from: self)
+      }
 }
 
 // Each language has multiple properties that one can get.

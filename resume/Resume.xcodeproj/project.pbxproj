@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		21210391277E3DB70001D8B8 /* LocalizableString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21210390277E3DB70001D8B8 /* LocalizableString.swift */; };
+		21210393277E55780001D8B8 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21210392277E55780001D8B8 /* Data.swift */; };
+		21210399277E95980001D8B8 /* ExperienceSectionRowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21210398277E95980001D8B8 /* ExperienceSectionRowCell.xib */; };
+		2121039B277E95B60001D8B8 /* ExperienceSectionRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2121039A277E95B60001D8B8 /* ExperienceSectionRowCell.swift */; };
 		21480F1A277E3340005D2907 /* SectionHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21480F18277E3340005D2907 /* SectionHeaderCell.xib */; };
 		21480F1B277E3340005D2907 /* SectionHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21480F19277E3340005D2907 /* SectionHeaderCell.swift */; };
 		21480F1D277E3704005D2907 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21480F1C277E3704005D2907 /* Icon.swift */; };
@@ -32,6 +35,9 @@
 
 /* Begin PBXFileReference section */
 		21210390277E3DB70001D8B8 /* LocalizableString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableString.swift; sourceTree = "<group>"; };
+		21210392277E55780001D8B8 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		21210398277E95980001D8B8 /* ExperienceSectionRowCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExperienceSectionRowCell.xib; sourceTree = "<group>"; };
+		2121039A277E95B60001D8B8 /* ExperienceSectionRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceSectionRowCell.swift; sourceTree = "<group>"; };
 		21480F18277E3340005D2907 /* SectionHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SectionHeaderCell.xib; sourceTree = "<group>"; };
 		21480F19277E3340005D2907 /* SectionHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionHeaderCell.swift; sourceTree = "<group>"; };
 		21480F1C277E3704005D2907 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
@@ -67,6 +73,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21210396277E94BF0001D8B8 /* Section Header */ = {
+			isa = PBXGroup;
+			children = (
+				21480F18277E3340005D2907 /* SectionHeaderCell.xib */,
+				21480F19277E3340005D2907 /* SectionHeaderCell.swift */,
+			);
+			path = "Section Header";
+			sourceTree = "<group>";
+		};
+		21210397277E94CA0001D8B8 /* Experience Section Row */ = {
+			isa = PBXGroup;
+			children = (
+				21210398277E95980001D8B8 /* ExperienceSectionRowCell.xib */,
+				2121039A277E95B60001D8B8 /* ExperienceSectionRowCell.swift */,
+			);
+			name = "Experience Section Row";
+			sourceTree = "<group>";
+		};
 		21480F1E277E3D22005D2907 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,7 +130,7 @@
 			children = (
 				21D396AC277C81A9007ECA78 /* Tab Controller */,
 				21D396C0277D0528007ECA78 /* Tabs */,
-				21D396D5277E2C4E007ECA78 /* Reusable UI */,
+				21D396D5277E2C4E007ECA78 /* Reusable UI Components */,
 				217A1184277BB2A2007977CC /* LaunchScreen.storyboard */,
 				217A1187277BB2A2007977CC /* Info.plist */,
 				217A1179277BB2A0007977CC /* AppDelegate.swift */,
@@ -123,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				217A118E277BB6D0007977CC /* Models.swift */,
+				21210392277E55780001D8B8 /* Data.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -199,13 +224,13 @@
 			path = Summary;
 			sourceTree = "<group>";
 		};
-		21D396D5277E2C4E007ECA78 /* Reusable UI */ = {
+		21D396D5277E2C4E007ECA78 /* Reusable UI Components */ = {
 			isa = PBXGroup;
 			children = (
-				21480F18277E3340005D2907 /* SectionHeaderCell.xib */,
-				21480F19277E3340005D2907 /* SectionHeaderCell.swift */,
+				21210397277E94CA0001D8B8 /* Experience Section Row */,
+				21210396277E94BF0001D8B8 /* Section Header */,
 			);
-			path = "Reusable UI";
+			path = "Reusable UI Components";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +298,7 @@
 			files = (
 				21480F1A277E3340005D2907 /* SectionHeaderCell.xib in Resources */,
 				217A1186277BB2A2007977CC /* LaunchScreen.storyboard in Resources */,
+				21210399277E95980001D8B8 /* ExperienceSectionRowCell.xib in Resources */,
 				21D396C5277D0585007ECA78 /* Experience.storyboard in Resources */,
 				21D396B7277CDC83007ECA78 /* Localizable.strings in Resources */,
 				217A1183277BB2A2007977CC /* Icons.xcassets in Resources */,
@@ -320,8 +346,10 @@
 				21D396B3277CDAF1007ECA78 /* EducationNavController.swift in Sources */,
 				217A117C277BB2A0007977CC /* SceneDelegate.swift in Sources */,
 				21210391277E3DB70001D8B8 /* LocalizableString.swift in Sources */,
+				2121039B277E95B60001D8B8 /* ExperienceSectionRowCell.swift in Sources */,
 				21D396AF277C8358007ECA78 /* RootCoordinator.swift in Sources */,
 				217A118F277BB6D0007977CC /* Models.swift in Sources */,
+				21210393277E55780001D8B8 /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,7 +434,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -461,7 +489,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -487,7 +515,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -517,7 +545,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

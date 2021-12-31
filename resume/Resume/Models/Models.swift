@@ -15,8 +15,8 @@ import Foundation
 struct Experience {
     var position: String
     var place: Place
-    var duration: Duration
-    var description: String
+    var dates: Dates
+    var description: [String] // an experience can have multiple descriptions
 }
 
 struct Place {
@@ -29,7 +29,7 @@ struct Address {
     var city: City
 }
 
-struct Duration {
+struct Dates {
     var start: Date
     // Optional because some experiences may not have end date as they are current ones.
     var end: Date?
@@ -39,12 +39,14 @@ enum State {
     case puertoRico
     case maryland
     case districtOfColumbia
+    case remote
 
-    var name: String {
+    var displayString: String {
         switch self {
         case .puertoRico: return "Puerto Rico"
         case .maryland: return "Maryland"
         case .districtOfColumbia: return "District of Columbia"
+        case .remote: return "Remote"
         }
     }
 
@@ -55,6 +57,7 @@ enum State {
         case .puertoRico: return "PR"
         case .maryland: return "MD"
         case .districtOfColumbia: return "DC"
+        case .remote: return "Remote"
         }
     }
 }
@@ -63,12 +66,16 @@ enum City {
     case patuxentRiver
     case sanJuan
     case washington
+    case greenbelt
+    case any
 
-    var name: String {
+    var displayString: String {
         switch self {
         case .patuxentRiver: return "Patuxent River"
         case .sanJuan: return "San Juan"
         case .washington: return "Washington"
+        case .greenbelt: return "Greenbelt"
+        case .any: return "Any city"
         }
     }
 }

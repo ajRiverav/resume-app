@@ -16,9 +16,14 @@ class ExperienceRootViewController: UIViewController {
 
 extension ExperienceRootViewController {
     func configureTableView() {
-        // Register cell for later use.
-        tableView.register(UINib(nibName: "\(SectionHeaderCell.self)", bundle: nil),
-                           forCellReuseIdentifier: "\(SectionHeaderCell.self)")
+        // Register cells to be used in this table so they can be dequeued later.
+        [
+          SectionHeaderCell.self,
+          ExperienceSectionRowCell.self
+        ].forEach {
+          tableView.register(UINib(nibName: "\($0)", bundle: nil),
+                             forCellReuseIdentifier: "\($0)")
+        }
 
         // This view controller handles all about the table view.
         // TODO: move data source somewhere else for less responsibilities.
@@ -40,19 +45,39 @@ extension ExperienceRootViewController {
 
 extension ExperienceRootViewController: UITableViewDataSource {
     func numberOfSections(in _: UITableView) -> Int {
-        2 // TODO: number of experiences.
+        experiences.count
     }
 
-    func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-        4 // TODO: each experience has 4 notes
+    func tableView(_: UITableView, numberOfRowsInSection experienceIndex: Int) -> Int {
+        experiences[experienceIndex].description.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // swiftlint:disable force_cast
-        let cell = tableView.dequeueReusableCell(withIdentifier: "\(SectionHeaderCell.self)",
-                                                 for: indexPath) as! SectionHeaderCell
 
-        return cell
+        let experience = experiences[indexPath.section]
+
+        switch indexPath.row {
+        case 0:
+            // swiftlint:disable force_cast
+            let cell = tableView.dequeueReusableCell(withIdentifier: "\(ExperienceSectionRowCell.self)",
+                                                     for: indexPath) as! ExperienceSectionRowCell
+
+            cell.viewModel = .init(icon: Icon.pin.image,
+                                   title: "\(experience.place.address.city.displayString), \(experience.place.address.state.displayString)")
+
+            return cell
+        case 1:
+            // swiftlint:disable force_cast
+            let cell = tableView.dequeueReusableCell(withIdentifier: "\(ExperienceSectionRowCell.self)",
+                                                     for: indexPath) as! ExperienceSectionRowCell
+            cell.viewModel = .init(icon: Icon.organigram.image, title: experience.position)
+
+            return cell
+
+        default:
+
+            return UITableViewCell()
+        }
     }
 }
 
@@ -60,11 +85,11 @@ extension ExperienceRootViewController: UITableViewDataSource {
 
 extension ExperienceRootViewController: UITableViewDelegate {
     // Setting Header Customised View
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection experienceIndex: Int) -> UIView? {
         // swiftlint:disable force_cast
         let cell = tableView.dequeueReusableCell(withIdentifier: "\(SectionHeaderCell.self)") as! SectionHeaderCell
 
-        cell.viewModel = .init(startDate: "2018", endDate: "2019", dateSeparator: "-", title: "Test")
+        cell.viewModel = .init(experiences[experienceIndex])
 
         return cell.contentView
     }
