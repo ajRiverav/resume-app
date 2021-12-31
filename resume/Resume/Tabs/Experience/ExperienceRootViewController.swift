@@ -56,6 +56,7 @@ extension ExperienceRootViewController: UITableViewDataSource {
 
         let experience = experiences[indexPath.section]
 
+        // TODO: too much responsibilities here. Probably it makes sense to create a class for the data source.
         switch indexPath.row {
         case 0:
             // swiftlint:disable force_cast
@@ -64,18 +65,15 @@ extension ExperienceRootViewController: UITableViewDataSource {
 
             cell.viewModel = .init(icon: Icon.pin.image,
                                    title: "\(experience.place.address.city.displayString), \(experience.place.address.state.displayString)")
-
             return cell
         case 1:
             // swiftlint:disable force_cast
             let cell = tableView.dequeueReusableCell(withIdentifier: "\(ExperienceSectionRowCell.self)",
                                                      for: indexPath) as! ExperienceSectionRowCell
             cell.viewModel = .init(icon: Icon.organigram.image, title: experience.position)
-
             return cell
 
         default:
-
             return UITableViewCell()
         }
     }

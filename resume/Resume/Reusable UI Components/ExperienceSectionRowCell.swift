@@ -15,6 +15,8 @@ class ExperienceSectionRowCell: UITableViewCell {
 
     public var viewModel = ViewModel() {
       didSet {
+          iconImageView.isHidden = (viewModel.icon == nil)
+
           iconImageView.image = viewModel.icon
           iconLabel.text = viewModel.title
       }

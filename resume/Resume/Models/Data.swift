@@ -50,10 +50,10 @@ var experiences: [Experience] = [
                place: Place(name: "CompuMED", address: remote),
                dates: Dates(start: UnixTime.jan2021.toDate,
                             end: UnixTime.dec2021.toDate),
-               description: ["task1", "task2", "task3"]),
-    Experience(position: "Co-founder, President, iOS developer",
-               place: Place(name: "QUALTICS", address: remote),
-               dates: Dates(start: UnixTime.apr2018.toDate,
-                            end: UnixTime.jan2021.toDate),
                description: ["task1", "task2", "task3"])
+//    Experience(position: "Co-founder, President, iOS developer",
+//               place: Place(name: "QUALTICS", address: remote),
+//               dates: Dates(start: UnixTime.apr2018.toDate,
+//                            end: UnixTime.jan2021.toDate),
+//               description: ["task1", "task2", "task3"])
 ]
