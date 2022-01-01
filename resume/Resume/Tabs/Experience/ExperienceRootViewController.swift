@@ -10,6 +10,10 @@ import UIKit
 
 class ExperienceRootViewController: UIViewController {
     @IBOutlet private var tableView: UITableView!
+
+    // every experience has a location (e.g. Maryland) AND position (SW Engineer).
+    let tableViewSectionRowOffset = 2
+
 }
 
 // MARK: - Methods
@@ -49,7 +53,7 @@ extension ExperienceRootViewController: UITableViewDataSource {
     }
 
     func tableView(_: UITableView, numberOfRowsInSection experienceIndex: Int) -> Int {
-        experiences[experienceIndex].description.count
+        tableViewSectionRowOffset + experiences[experienceIndex].description.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -63,8 +67,8 @@ extension ExperienceRootViewController: UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "\(ExperienceSectionRowCell.self)",
                                                      for: indexPath) as! ExperienceSectionRowCell
 
-            let title = "\(experience.place.address.city.displayString), \(experience.place.address.state.displayString)"
-            cell.viewModel = .init(icon: Icon.pin.image, title: title)
+            cell.viewModel = .init(icon: Icon.pin.image,
+                                   title: "\(experience.place.address.city.displayString), \(experience.place.address.state.displayString)")
 
             return cell
         case 1:
@@ -75,7 +79,11 @@ extension ExperienceRootViewController: UITableViewDataSource {
             return cell
 
         default:
-            return UITableViewCell()
+            // swiftlint:disable force_cast
+            let cell = tableView.dequeueReusableCell(withIdentifier: "\(ExperienceSectionRowCell.self)",
+                                                     for: indexPath) as! ExperienceSectionRowCell
+            cell.viewModel = .init(icon: Icon.chevronRight.image, title: experience.description[indexPath.row - tableViewSectionRowOffset])
+            return cell
         }
     }
 }

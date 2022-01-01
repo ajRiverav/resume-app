@@ -50,10 +50,13 @@ var experiences: [Experience] = [
                place: Place(name: "CompuMED", address: remote),
                dates: Dates(start: UnixTime.jan2021.toDate,
                             end: UnixTime.dec2021.toDate),
+               // swiftlint:disable line_length
+               description: ["Qualtics was a software startup focusing on the development of complex enterprise software development for mobile (iOS and Android) and desktop(Windows, Linux, and macOS) platforms.",
+                             "lere lejrij fijeijf aijaijf ijasijfija aijaisjfaisjfj faiajasijfija asijfa",
+                             "lere lejrij fijeijf aijaijf ijasijfija aijaisjfaisjfj faiajasijfija asijfa"]),
+    Experience(position: "Co-founder, President, iOS developer",
+               place: Place(name: "QUALTICS", address: remote),
+               dates: Dates(start: UnixTime.apr2018.toDate,
+                            end: UnixTime.jan2021.toDate),
                description: ["task1", "task2", "task3"])
-//    Experience(position: "Co-founder, President, iOS developer",
-//               place: Place(name: "QUALTICS", address: remote),
-//               dates: Dates(start: UnixTime.apr2018.toDate,
-//                            end: UnixTime.jan2021.toDate),
-//               description: ["task1", "task2", "task3"])
 ]

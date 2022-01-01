@@ -16,6 +16,7 @@ enum Icon {
     case pin
     case organigram
     case diploma
+    case chevronRight
 
     /// Image for the icon
     var image: UIImage? {
@@ -27,6 +28,7 @@ enum Icon {
         case .pin: return UIImage(named: "pin")
         case .diploma: return UIImage(named: "diploma")
         case .organigram: return UIImage(named: "organigram")
+        case .chevronRight: return UIImage(named: "chevron right")
         }
     }
 
@@ -37,7 +39,7 @@ enum Icon {
         case .identificationCard: return "Icon by https://freeicons.io/profile/3054 Nine One on https://freeicons.io"
         case .crane: return "Icon by https://freeicons.io/profile/2257 www.wishforge.games on https://freeicons.io"
         case .maleStudent: return nil
-        case .pin, .organigram: return "Icon by https://freeicons.io/profile/3 icon king1 on https://freeicons.io"
+        case .pin, .organigram, .chevronRight: return "Icon by https://freeicons.io/profile/3 icon king1 on https://freeicons.io"
         case .diploma: return "Icon by https://freeicons.io/profile/5790 ColourCreatype on https://freeicons.io"
         }
     }
