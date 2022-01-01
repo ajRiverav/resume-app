@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		211AE7A32780D62800BA1937 /* Education.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 211AE7A22780D62800BA1937 /* Education.storyboard */; };
+		211AE7A52780D65100BA1937 /* EducationRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211AE7A42780D65100BA1937 /* EducationRootViewController.swift */; };
 		21210391277E3DB70001D8B8 /* LocalizableString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21210390277E3DB70001D8B8 /* LocalizableString.swift */; };
 		21210393277E55780001D8B8 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21210392277E55780001D8B8 /* Data.swift */; };
-		21210399277E95980001D8B8 /* ExperienceSectionRowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21210398277E95980001D8B8 /* ExperienceSectionRowCell.xib */; };
-		2121039B277E95B60001D8B8 /* ExperienceSectionRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2121039A277E95B60001D8B8 /* ExperienceSectionRowCell.swift */; };
+		21210399277E95980001D8B8 /* SectionRowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21210398277E95980001D8B8 /* SectionRowCell.xib */; };
+		2121039B277E95B60001D8B8 /* SectionRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2121039A277E95B60001D8B8 /* SectionRowCell.swift */; };
 		21480F1A277E3340005D2907 /* SectionHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21480F18277E3340005D2907 /* SectionHeaderCell.xib */; };
 		21480F1B277E3340005D2907 /* SectionHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21480F19277E3340005D2907 /* SectionHeaderCell.swift */; };
 		21480F1D277E3704005D2907 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21480F1C277E3704005D2907 /* Icon.swift */; };
@@ -34,10 +36,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		211AE7A22780D62800BA1937 /* Education.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Education.storyboard; sourceTree = "<group>"; };
+		211AE7A42780D65100BA1937 /* EducationRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationRootViewController.swift; sourceTree = "<group>"; };
 		21210390277E3DB70001D8B8 /* LocalizableString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableString.swift; sourceTree = "<group>"; };
 		21210392277E55780001D8B8 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		21210398277E95980001D8B8 /* ExperienceSectionRowCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExperienceSectionRowCell.xib; sourceTree = "<group>"; };
-		2121039A277E95B60001D8B8 /* ExperienceSectionRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceSectionRowCell.swift; sourceTree = "<group>"; };
+		21210398277E95980001D8B8 /* SectionRowCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionRowCell.xib; sourceTree = "<group>"; };
+		2121039A277E95B60001D8B8 /* SectionRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionRowCell.swift; sourceTree = "<group>"; };
 		21480F18277E3340005D2907 /* SectionHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SectionHeaderCell.xib; sourceTree = "<group>"; };
 		21480F19277E3340005D2907 /* SectionHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionHeaderCell.swift; sourceTree = "<group>"; };
 		21480F1C277E3704005D2907 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
@@ -82,13 +86,13 @@
 			path = "Section Header";
 			sourceTree = "<group>";
 		};
-		21210397277E94CA0001D8B8 /* Experience Section Row */ = {
+		21210397277E94CA0001D8B8 /* Section Row */ = {
 			isa = PBXGroup;
 			children = (
-				21210398277E95980001D8B8 /* ExperienceSectionRowCell.xib */,
-				2121039A277E95B60001D8B8 /* ExperienceSectionRowCell.swift */,
+				21210398277E95980001D8B8 /* SectionRowCell.xib */,
+				2121039A277E95B60001D8B8 /* SectionRowCell.swift */,
 			);
-			name = "Experience Section Row";
+			name = "Section Row";
 			sourceTree = "<group>";
 		};
 		21480F1E277E3D22005D2907 /* Icons */ = {
@@ -211,7 +215,9 @@
 		21D396C2277D053D007ECA78 /* Education */ = {
 			isa = PBXGroup;
 			children = (
+				211AE7A22780D62800BA1937 /* Education.storyboard */,
 				21D396B2277CDAF1007ECA78 /* EducationNavController.swift */,
+				211AE7A42780D65100BA1937 /* EducationRootViewController.swift */,
 			);
 			path = Education;
 			sourceTree = "<group>";
@@ -227,7 +233,7 @@
 		21D396D5277E2C4E007ECA78 /* Reusable UI Components */ = {
 			isa = PBXGroup;
 			children = (
-				21210397277E94CA0001D8B8 /* Experience Section Row */,
+				21210397277E94CA0001D8B8 /* Section Row */,
 				21210396277E94BF0001D8B8 /* Section Header */,
 			);
 			path = "Reusable UI Components";
@@ -298,11 +304,12 @@
 			files = (
 				21480F1A277E3340005D2907 /* SectionHeaderCell.xib in Resources */,
 				217A1186277BB2A2007977CC /* LaunchScreen.storyboard in Resources */,
-				21210399277E95980001D8B8 /* ExperienceSectionRowCell.xib in Resources */,
+				21210399277E95980001D8B8 /* SectionRowCell.xib in Resources */,
 				21D396C5277D0585007ECA78 /* Experience.storyboard in Resources */,
 				21D396B7277CDC83007ECA78 /* Localizable.strings in Resources */,
 				217A1183277BB2A2007977CC /* Icons.xcassets in Resources */,
 				217A1181277BB2A0007977CC /* Main.storyboard in Resources */,
+				211AE7A32780D62800BA1937 /* Education.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +343,7 @@
 				21D396B1277CDAD6007ECA78 /* ExperienceNavController.swift in Sources */,
 				217A117E277BB2A0007977CC /* MainTabViewController.swift in Sources */,
 				21480F1B277E3340005D2907 /* SectionHeaderCell.swift in Sources */,
+				211AE7A52780D65100BA1937 /* EducationRootViewController.swift in Sources */,
 				21D396BF277CEA87007ECA78 /* UINavigationController.swift in Sources */,
 				217A1192277BBB46007977CC /* Date.swift in Sources */,
 				21D396C7277D09E7007ECA78 /* ExperienceRootViewController.swift in Sources */,
@@ -346,7 +354,7 @@
 				21D396B3277CDAF1007ECA78 /* EducationNavController.swift in Sources */,
 				217A117C277BB2A0007977CC /* SceneDelegate.swift in Sources */,
 				21210391277E3DB70001D8B8 /* LocalizableString.swift in Sources */,
-				2121039B277E95B60001D8B8 /* ExperienceSectionRowCell.swift in Sources */,
+				2121039B277E95B60001D8B8 /* SectionRowCell.swift in Sources */,
 				21D396AF277C8358007ECA78 /* RootCoordinator.swift in Sources */,
 				217A118F277BB6D0007977CC /* Models.swift in Sources */,
 				21210393277E55780001D8B8 /* Data.swift in Sources */,

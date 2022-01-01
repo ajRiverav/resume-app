@@ -1,24 +1,24 @@
 //
-//  ExperienceRootViewController.swift
+//  EducationRootViewController.swift
 //  Resume
 //
-//  Created by AJ Rivera on 12/29/21.
+//  Created by AJ Rivera on 1/1/22.
 //
 
 import Foundation
 import UIKit
 
-class ExperienceRootViewController: UIViewController {
+class EducationRootViewController: UIViewController {
     @IBOutlet private var tableView: UITableView!
 
-    // every experience has a location (e.g. Maryland) AND position (e.g. SW Engineer).
+    // every education has a X (e.g. X) AND X (X).
     let tableViewSectionRowOffset = 2
 
 }
 
 // MARK: - Methods
 
-extension ExperienceRootViewController {
+extension EducationRootViewController {
     func configureTableView() {
         // Register cells to be used in this table so they can be dequeued later.
         [
@@ -38,7 +38,7 @@ extension ExperienceRootViewController {
 
 // MARK: - UIViewController
 
-extension ExperienceRootViewController {
+extension EducationRootViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
@@ -47,18 +47,18 @@ extension ExperienceRootViewController {
 
 // MARK: - UITableViewDataSource
 
-extension ExperienceRootViewController: UITableViewDataSource {
+extension EducationRootViewController: UITableViewDataSource {
     func numberOfSections(in _: UITableView) -> Int {
-        experienceList.count
+        educationList.count
     }
 
     func tableView(_: UITableView, numberOfRowsInSection experienceIndex: Int) -> Int {
-        tableViewSectionRowOffset + experienceList[experienceIndex].description.count
+        tableViewSectionRowOffset + educationList[experienceIndex].description.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let experience = experienceList[indexPath.section]
+        let education = educationList[indexPath.section]
 
         // TODO: too many responsibilities here. Probably it makes sense to create a class for the data source.
         switch indexPath.row {
@@ -68,21 +68,21 @@ extension ExperienceRootViewController: UITableViewDataSource {
                                                      for: indexPath) as! SectionRowCell
 
             cell.viewModel = .init(icon: Icon.pin.image,
-                                   title: "\(experience.place.address.city.displayString), \(experience.place.address.state.displayString)")
+                                   title: "\(education.place.address.city.displayString), \(education.place.address.state.displayString)")
 
             return cell
         case 1:
             // swiftlint:disable force_cast
             let cell = tableView.dequeueReusableCell(withIdentifier: "\(SectionRowCell.self)",
                                                      for: indexPath) as! SectionRowCell
-            cell.viewModel = .init(icon: Icon.organigram.image, title: experience.position)
+            cell.viewModel = .init(icon: Icon.diploma.image, title: education.degree)
             return cell
 
         default:
             // swiftlint:disable force_cast
             let cell = tableView.dequeueReusableCell(withIdentifier: "\(SectionRowCell.self)",
                                                      for: indexPath) as! SectionRowCell
-            cell.viewModel = .init(icon: Icon.chevronRight.image, title: experience.description[indexPath.row - tableViewSectionRowOffset])
+            cell.viewModel = .init(icon: Icon.chevronRight.image, title: education.description[indexPath.row - tableViewSectionRowOffset])
             return cell
         }
     }
@@ -90,7 +90,7 @@ extension ExperienceRootViewController: UITableViewDataSource {
 
 // MARK: - UITableViewDelegate
 
-extension ExperienceRootViewController: UITableViewDelegate {
+extension EducationRootViewController: UITableViewDelegate {
     // Setting Header Customised View
     func tableView(_ tableView: UITableView, viewForHeaderInSection experienceIndex: Int) -> UIView? {
         // swiftlint:disable force_cast

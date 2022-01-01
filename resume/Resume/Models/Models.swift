@@ -24,6 +24,13 @@ struct Place {
     var address: Address
 }
 
+struct Education {
+    var place: Place // e.g. university name
+    var degree: String
+    var dates: Dates
+    var description: [String]
+}
+
 struct Address {
     var state: State
     var city: City
@@ -67,6 +74,7 @@ enum City {
     case sanJuan
     case washington
     case greenbelt
+    case baltimore
     case any
 
     var displayString: String {
@@ -76,6 +84,7 @@ enum City {
         case .washington: return "Washington"
         case .greenbelt: return "Greenbelt"
         case .any: return "Any city"
+        case .baltimore: return "Baltimore"
         }
     }
 }

@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class ExperienceSectionRowCell: UITableViewCell {
+class SectionRowCell: UITableViewCell {
 
     @IBOutlet private weak var iconImageView: UIImageView!
     @IBOutlet private weak var iconLabel: UILabel!
@@ -23,7 +23,7 @@ class ExperienceSectionRowCell: UITableViewCell {
     }
 }
 
-extension ExperienceSectionRowCell {
+extension SectionRowCell {
   struct ViewModel {
       var icon: UIImage?
       var title: String = ""

@@ -40,12 +40,17 @@ enum UnixTime: TimeInterval {
 }
 
 // avoid DRY: reuse addresses
-var washington = Address(state: .districtOfColumbia, city: .washington)
-var sanJuan = Address(state: .puertoRico, city: .sanJuan)
-var greenbelt = Address(state: .maryland, city: .greenbelt)
-var remote = Address(state: .remote, city: .any)
+let washington = Address(state: .districtOfColumbia, city: .washington)
+let sanJuan = Address(state: .puertoRico, city: .sanJuan)
+let greenbelt = Address(state: .maryland, city: .greenbelt)
+let baltimore = Address(state: .maryland, city: .baltimore)
+let remote = Address(state: .remote, city: .any)
 
-var experiences: [Experience] = [
+//
+// Experiences
+//
+
+let experienceList: [Experience] = [
     Experience(position: "Co-founder, Product Manager",
                place: Place(name: "CompuMED", address: remote),
                dates: Dates(start: UnixTime.jan2021.toDate,
@@ -59,4 +64,17 @@ var experiences: [Experience] = [
                dates: Dates(start: UnixTime.apr2018.toDate,
                             end: UnixTime.jan2021.toDate),
                description: ["task1", "task2", "task3"])
+]
+
+//
+// Education
+//
+
+let educationList: [Education] = [
+    Education(place: Place(name: "Johns Hopkins University", address: baltimore),
+              degree: "Master of Science in Electrical and Computer Engineering",
+              dates: Dates(start: UnixTime.year2013.toDate, end: UnixTime.year2016.toDate),
+              description: ["Major area of study: Signal Processing/Machine Learning",
+                           "Final Work: 'Prediction of stock price direction near support levels using an Artificial Neural Network'",
+                           "GPA: 4.0/4.0"])
 ]

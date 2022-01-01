@@ -40,7 +40,8 @@ enum Icon {
         case .crane: return "Icon by https://freeicons.io/profile/2257 www.wishforge.games on https://freeicons.io"
         case .maleStudent: return nil
         case .pin, .organigram, .chevronRight: return "Icon by https://freeicons.io/profile/3 icon king1 on https://freeicons.io"
-        case .diploma: return "Icon by https://freeicons.io/profile/5790 ColourCreatype on https://freeicons.io"
+        case .diploma: return "Icon by https://freeicons.io/profile/8942 Alex Martynov on https://freeicons.io"
+
         }
     }
 }
