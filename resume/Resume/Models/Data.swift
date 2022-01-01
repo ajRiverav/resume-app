@@ -47,7 +47,7 @@ let baltimore = Address(state: .maryland, city: .baltimore)
 let remote = Address(state: .remote, city: .any)
 
 //
-// Experiences
+// Experience
 //
 
 let experienceList: [Experience] = [
@@ -74,7 +74,13 @@ let educationList: [Education] = [
     Education(place: Place(name: "Johns Hopkins University", address: baltimore),
               degree: "Master of Science in Electrical and Computer Engineering",
               dates: Dates(start: UnixTime.year2013.toDate, end: UnixTime.year2016.toDate),
-              description: ["Major area of study: Signal Processing/Machine Learning",
+              description: ["Major area of study: Machine Learning/Signal Processing",
                            "Final Work: 'Prediction of stock price direction near support levels using an Artificial Neural Network'",
-                           "GPA: 4.0/4.0"])
+                           "GPA: 4.0/4.0"]),
+    Education(place: Place(name: "Polytechnic University of PR", address: sanJuan),
+              degree: "Bachelor of Science in Electrical Engineering",
+              dates: Dates(start: UnixTime.year2002.toDate, end: UnixTime.year2008.toDate),
+              description: ["Major area of study: Software Development/Signal Processing",
+                           "Final Work: 'Prediction of stock price direction near support levels using an Artificial Neural Network'",
+                           "GPA: 3.2/4.0"])
 ]
