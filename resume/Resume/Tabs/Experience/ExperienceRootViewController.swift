@@ -56,15 +56,16 @@ extension ExperienceRootViewController: UITableViewDataSource {
 
         let experience = experiences[indexPath.section]
 
-        // TODO: too much responsibilities here. Probably it makes sense to create a class for the data source.
+        // TODO: too many responsibilities here. Probably it makes sense to create a class for the data source.
         switch indexPath.row {
         case 0:
             // swiftlint:disable force_cast
             let cell = tableView.dequeueReusableCell(withIdentifier: "\(ExperienceSectionRowCell.self)",
                                                      for: indexPath) as! ExperienceSectionRowCell
 
-            cell.viewModel = .init(icon: Icon.pin.image,
-                                   title: "\(experience.place.address.city.displayString), \(experience.place.address.state.displayString)")
+            let title = "\(experience.place.address.city.displayString), \(experience.place.address.state.displayString)"
+            cell.viewModel = .init(icon: Icon.pin.image, title: title)
+
             return cell
         case 1:
             // swiftlint:disable force_cast
