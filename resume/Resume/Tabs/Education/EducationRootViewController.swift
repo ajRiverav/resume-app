@@ -52,8 +52,8 @@ extension EducationRootViewController: UITableViewDataSource {
         educationList.count
     }
 
-    func tableView(_: UITableView, numberOfRowsInSection experienceIndex: Int) -> Int {
-        tableViewSectionRowOffset + educationList[experienceIndex].description.count
+    func tableView(_: UITableView, numberOfRowsInSection educationIndex: Int) -> Int {
+        tableViewSectionRowOffset + educationList[educationIndex].description.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -92,11 +92,11 @@ extension EducationRootViewController: UITableViewDataSource {
 
 extension EducationRootViewController: UITableViewDelegate {
     // Setting Header Customised View
-    func tableView(_ tableView: UITableView, viewForHeaderInSection experienceIndex: Int) -> UIView? {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection educationIndex: Int) -> UIView? {
         // swiftlint:disable force_cast
         let cell = tableView.dequeueReusableCell(withIdentifier: "\(SectionHeaderCell.self)") as! SectionHeaderCell
 
-        cell.viewModel = .init(experienceList[experienceIndex])
+        cell.viewModel = .init(educationList[educationIndex])
 
         return cell.contentView
     }

@@ -41,4 +41,10 @@ extension SectionHeaderCell.ViewModel {
                   endDate: experience.dates.end?.formatted(as: .yyyy),
                   dateSeparator: "-", title: experience.place.name)
     }
+
+    init(_ education: Education) {
+        self.init(startDate: education.dates.start.formatted(as: .yyyy),
+                  endDate: education.dates.end?.formatted(as: .yyyy),
+                  dateSeparator: "-", title: education.place.name)
+    }
 }
