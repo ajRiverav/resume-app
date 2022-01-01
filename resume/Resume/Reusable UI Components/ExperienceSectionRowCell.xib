@@ -16,8 +16,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="500" height="111"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="poZ-Tt-H8b">
-                        <rect key="frame" x="61" y="3" width="431" height="105"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="justified" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="poZ-Tt-H8b">
+                        <rect key="frame" x="61" y="3" width="423" height="105"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -32,7 +32,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="poZ-Tt-H8b" firstAttribute="top" secondItem="ToE-yS-ABY" secondAttribute="top" constant="3" id="5CS-A3-fN7"/>
-                    <constraint firstAttribute="trailing" secondItem="poZ-Tt-H8b" secondAttribute="trailing" constant="8" id="7Vh-Bb-fUv"/>
+                    <constraint firstAttribute="trailing" secondItem="poZ-Tt-H8b" secondAttribute="trailing" constant="16" id="7Vh-Bb-fUv"/>
                     <constraint firstItem="9rX-Yf-NHd" firstAttribute="centerY" secondItem="ToE-yS-ABY" secondAttribute="centerY" id="BZW-c8-sy6"/>
                     <constraint firstAttribute="bottom" secondItem="poZ-Tt-H8b" secondAttribute="bottom" constant="3" id="Bb4-VT-hKC"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="9rX-Yf-NHd" secondAttribute="bottom" constant="3" id="Od3-ko-7qa"/>
