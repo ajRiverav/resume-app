@@ -14,7 +14,7 @@ enum Icon {
     case crane
     case maleStudent
     case pin
-    case organigram
+    case groupOfPeople
     case diploma
     case chevronRight
 
@@ -27,7 +27,7 @@ enum Icon {
         case .maleStudent: return UIImage(named: "male student")
         case .pin: return UIImage(named: "pin")
         case .diploma: return UIImage(named: "diploma")
-        case .organigram: return UIImage(named: "organigram")
+        case .groupOfPeople: return UIImage(named: "group of people")
         case .chevronRight: return UIImage(named: "chevron right")
         }
     }
@@ -39,7 +39,7 @@ enum Icon {
         case .identificationCard: return "Icon by https://freeicons.io/profile/3054 Nine One on https://freeicons.io"
         case .crane: return "Icon by https://freeicons.io/profile/2257 www.wishforge.games on https://freeicons.io"
         case .maleStudent: return nil
-        case .pin, .organigram, .chevronRight: return "Icon by https://freeicons.io/profile/3 icon king1 on https://freeicons.io"
+        case .pin, .groupOfPeople, .chevronRight: return "Icon by https://freeicons.io/profile/3 icon king1 on https://freeicons.io"
         case .diploma: return "Icon by https://freeicons.io/profile/8942 Alex Martynov on https://freeicons.io"
 
         }

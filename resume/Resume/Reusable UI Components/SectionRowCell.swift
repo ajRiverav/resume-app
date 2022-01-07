@@ -43,7 +43,7 @@ extension SectionRowCell: ExperienceDetailsConfigurable {
         case .location:
             viewModel = .init(icon: Icon.pin.image, title: "\(experience.place.address.city.displayString), \(experience.place.address.state.displayString)")
         case .position:
-            viewModel = .init(icon: Icon.organigram.image, title: experience.position)
+            viewModel = .init(icon: Icon.groupOfPeople.image, title: experience.position)
         case .note:
             // TODO: Uuugh. Fix this -2 thing.
             viewModel = .init(icon: Icon.chevronRight.image, title: experience.noteList[detailIndex-2])
