@@ -19,7 +19,7 @@ class SectionRowCell: UITableViewCell {
           iconLabel.text = viewModel.title
           iconLabel.textColor = viewModel.textColor
           contentView.backgroundColor = viewModel.backgroundColor
-          iconLabel.font = UIFont(name: iconLabel.font.fontName, size: viewModel.fontSize)
+          iconLabel.font = UIFont(name: iconLabel.font.familyName, size: viewModel.fontSize)
       }
     }
 }

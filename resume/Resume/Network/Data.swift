@@ -17,11 +17,12 @@ enum UnixTime: TimeInterval {
     // Right: The approximate representation un UNIX time.
     //
 
-    case year2018 = 1546224722
-    case year2013 = 1388458322
-    case year2016 = 1483152722
     case year2002 = 1041303122
     case year2008 = 1230691922
+    case year2013 = 1388458322
+    case year2016 = 1483152722
+    case year2018 = 1546224722
+    case year2019 = 1546903773
 
     case dec2021 = 1640681463
     case jan2021 = 1611546165
@@ -67,7 +68,7 @@ let experienceList: [Experience] = [
                place: Place(name: "Qualtics", address: remote),
                dates: Dates(start: UnixTime.apr2018.toDate,
                             end: UnixTime.jan2021.toDate),
-               noteList: ["Qualtics was a software startup focused on developing software tools to help utility companies quickly identify outage magnitude and location using customers smartphones, avoiding the need of expensive digital meters.",
+               noteList: ["Qualtics was a software startup focused on developing software tools to help utility companies quickly identify outage magnitude and location using customers smartphones, reducing the need of expensive digital meters.",
                           "Technical responsibilities: UX design and iOS development. Administrative responsibilities: strategic vision and execution, proposal writing, employee management, customer care, company finances.",
                           "Launched proof-of-concept iOS app. Contributed to the UX/UI design and more than 50% of the iOS app.. As of Jan 2, 2022, the app is still available on the App Stor (apps.apple.com/us/app/apagon-app/id1362697139 or apagonapp.com)",
                          "Wrote proposals and led meetings that helped Qualtics raise $95,000 of equity-free funding from different sources including a startup accelerator/app competition.",
@@ -84,7 +85,7 @@ let experienceList: [Experience] = [
     // --------------------------------------------------------------------------------------------------------
     // --------------------------------------------------------------------------------------------------------
     Experience(position: "Software Engineer in the Acoustics Systems Division",
-               place: Place(name: "Dept. of the Navy", address: paxRiver),
+               place: Place(name: "Dept. of the Navy (NAVAIR)", address: paxRiver),
                dates: Dates(start: UnixTime.jan2013.toDate,
                             end: UnixTime.mar2015.toDate),
                noteList: ["Conducting signal processing research and development for a variety of sonar applications. Sonars are used to search for and locate submarines.",
@@ -95,7 +96,7 @@ let experienceList: [Experience] = [
     // --------------------------------------------------------------------------------------------------------
     // --------------------------------------------------------------------------------------------------------
     Experience(position: "Software Engineer",
-               place: Place(name: "Dept. of the Navy", address: panamaCityBeach),
+               place: Place(name: "Dept. of the Navy (NAVSEA)", address: panamaCityBeach),
                dates: Dates(start: UnixTime.sep2010.toDate,
                             end: UnixTime.mar2015.toDate),
                noteList: ["Worked on a communications system between a navy ship and unmanned vehicles"]),
@@ -114,7 +115,15 @@ let experienceList: [Experience] = [
                dates: Dates(start: UnixTime.jun2007.toDate,
                             end: UnixTime.aug2007.toDate),
                noteList: ["Supported team working on an airborne radar being developed at NASA Goddard Space Flight Center that combines electronic beam scanning and digital beam forming technologies.",
-                          "Developed and implemented signal processing algorithms in MATLAB to compensate for aircraft roll observed in radar measurements."])
+                          "Developed and implemented signal processing algorithms in MATLAB to compensate for aircraft roll observed in radar measurements."]),
+    // --------------------------------------------------------------------------------------------------------
+    // --------------------------------------------------------------------------------------------------------
+        Experience(position: "Volunteer",
+                   place: Place(name: "Cenadores (Non-profit)", address: washington),
+                   dates: Dates(start: UnixTime.year2016.toDate,
+                                end: UnixTime.year2019.toDate),
+                   noteList: ["Involved in the design and execution of the organization’s financial literacy pilot project, whose goal is to increase the financial knowledge of high-school students in Puerto Rico.",
+                              "Developed and taught the Income and Investments modules to a group of 30 students."])
 ]
 
 // MARK: - Education
@@ -131,3 +140,6 @@ let educationList: [Education] = [
               description: ["Major area of study: Software Development/Signal Processing. GPA: 3.2/4.0",
                            "Conducted undergraduate research in computational electromagnetics."])
 ]
+
+// MARK: - Summary
+

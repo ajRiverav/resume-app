@@ -17,6 +17,9 @@
 		21362EA52788A71500A26778 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21362EA42788A71500A26778 /* UIColor.swift */; };
 		21362EA82788C26600A26778 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21362EA72788C26600A26778 /* UITableView.swift */; };
 		21362EAA2788C4BF00A26778 /* UITabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21362EA92788C4BF00A26778 /* UITabBarController.swift */; };
+		21362EAC2788E2E600A26778 /* Summary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21362EAB2788E2E600A26778 /* Summary.storyboard */; };
+		21362EAE2788E2F900A26778 /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21362EAD2788E2F900A26778 /* SummaryViewController.swift */; };
+		21362EB02788E35F00A26778 /* SummaryTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21362EAF2788E35F00A26778 /* SummaryTableViewDataSource.swift */; };
 		21480F1A277E3340005D2907 /* SectionHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21480F18277E3340005D2907 /* SectionHeaderCell.xib */; };
 		21480F1B277E3340005D2907 /* SectionHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21480F19277E3340005D2907 /* SectionHeaderCell.swift */; };
 		21480F1D277E3704005D2907 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21480F1C277E3704005D2907 /* Icon.swift */; };
@@ -50,6 +53,9 @@
 		21362EA42788A71500A26778 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		21362EA72788C26600A26778 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		21362EA92788C4BF00A26778 /* UITabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarController.swift; sourceTree = "<group>"; };
+		21362EAB2788E2E600A26778 /* Summary.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Summary.storyboard; sourceTree = "<group>"; };
+		21362EAD2788E2F900A26778 /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
+		21362EAF2788E35F00A26778 /* SummaryTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryTableViewDataSource.swift; sourceTree = "<group>"; };
 		21480F18277E3340005D2907 /* SectionHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SectionHeaderCell.xib; sourceTree = "<group>"; };
 		21480F19277E3340005D2907 /* SectionHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionHeaderCell.swift; sourceTree = "<group>"; };
 		21480F1C277E3704005D2907 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
@@ -245,7 +251,10 @@
 		21D396C3277D0546007ECA78 /* Summary */ = {
 			isa = PBXGroup;
 			children = (
+				21362EAB2788E2E600A26778 /* Summary.storyboard */,
 				21D396BC277CE889007ECA78 /* SummaryNavController.swift */,
+				21362EAD2788E2F900A26778 /* SummaryViewController.swift */,
+				21362EAF2788E35F00A26778 /* SummaryTableViewDataSource.swift */,
 			);
 			path = Summary;
 			sourceTree = "<group>";
@@ -329,6 +338,7 @@
 				21D396B7277CDC83007ECA78 /* Localizable.strings in Resources */,
 				217A1183277BB2A2007977CC /* Icons.xcassets in Resources */,
 				217A1181277BB2A0007977CC /* Main.storyboard in Resources */,
+				21362EAC2788E2E600A26778 /* Summary.storyboard in Resources */,
 				211AE7A32780D62800BA1937 /* Education.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,7 +390,9 @@
 				21D396AF277C8358007ECA78 /* RootCoordinator.swift in Sources */,
 				217A118F277BB6D0007977CC /* Models.swift in Sources */,
 				21210393277E55780001D8B8 /* Data.swift in Sources */,
+				21362EAE2788E2F900A26778 /* SummaryViewController.swift in Sources */,
 				211AE7A727834A0200BA1937 /* ExperienceTableViewDataSource.swift in Sources */,
+				21362EB02788E35F00A26778 /* SummaryTableViewDataSource.swift in Sources */,
 				21362EA82788C26600A26778 /* UITableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

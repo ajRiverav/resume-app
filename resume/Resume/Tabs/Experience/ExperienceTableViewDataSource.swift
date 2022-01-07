@@ -77,8 +77,8 @@ extension ExperienceTableViewDataSource {
                 let header = ExperienceViewController.Section.HeaderType.job(experience)
 
                 var rows = [ExperienceViewController.Section.RowType]()
-                rows.append(.location)
                 rows.append(.position)
+                rows.append(.location)
                 _ = experience.noteList.map {_ in rows.append(.note)}
 
                 sectionList.append(ExperienceViewController.Section.experience(header, rows))
