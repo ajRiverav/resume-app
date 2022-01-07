@@ -13,5 +13,6 @@ class EducationNavController: UINavigationController {
         super.viewDidLoad()
         setTabBarItemTitle(LocalizableString.education.localized)
         setTabBarItemImage(Icon.maleStudent.image)
+        setNavBarBackgroundColor()
     }
 }

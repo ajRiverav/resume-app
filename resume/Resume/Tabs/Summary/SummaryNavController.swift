@@ -13,5 +13,6 @@ class SummaryNavController: UINavigationController {
         super.viewDidLoad()
         setTabBarItemTitle(LocalizableString.summary.localized)
         setTabBarItemImage(Icon.identificationCard.image)
+        setNavBarBackgroundColor()
     }
 }

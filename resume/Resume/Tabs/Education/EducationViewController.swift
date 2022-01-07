@@ -20,6 +20,7 @@ class EducationViewController: UIViewController {
 
 extension EducationViewController {
     func configureTableView() {
+        tableView.setBackgroundColor()
         tableView.backgroundColor = .antiFlashWhite
 
         // Register cells to be used in this table so they can be dequeued later.

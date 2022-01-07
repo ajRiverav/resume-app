@@ -18,4 +18,8 @@ extension UINavigationController {
     func setTabBarItemImage(_ image: UIImage?) {
         tabBarItem.image = image
     }
+
+    func setNavBarBackgroundColor(color: UIColor = .antiFlashWhite) {
+        navigationBar.backgroundColor = color
+    }
 }

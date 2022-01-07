@@ -17,7 +17,8 @@ class ExperienceViewController: UIViewController {
 
 extension ExperienceViewController {
     func configureTableView() {
-        tableView.backgroundColor = .antiFlashWhite
+        tableView.setBackgroundColor()
+
         // Register cells to be used in this table so they can be dequeued later.
         [
             SectionHeaderCell.self,

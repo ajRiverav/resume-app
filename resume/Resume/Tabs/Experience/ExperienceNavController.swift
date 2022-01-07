@@ -13,5 +13,6 @@ class ExperienceNavController: UINavigationController {
         super.viewDidLoad()
         setTabBarItemTitle(LocalizableString.experience.localized)
         setTabBarItemImage(Icon.crane.image)
+        setNavBarBackgroundColor()
     }
 }
