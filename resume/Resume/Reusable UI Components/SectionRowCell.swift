@@ -20,6 +20,7 @@ class SectionRowCell: UITableViewCell {
           iconLabel.text = viewModel.title
           iconLabel.textColor = viewModel.textColor
           contentView.backgroundColor = viewModel.backgroundColor
+          iconLabel.font = UIFont(name: iconLabel.font.fontName, size: viewModel.fontSize)
       }
     }
 }
@@ -30,7 +31,16 @@ extension SectionRowCell {
       var title: String = ""
       var textColor: UIColor = .chineseBlack
       var backgroundColor: UIColor = .antiFlashWhite
+      var fontSize: CGFloat = 17
   }
+}
+
+extension SectionRowCell.ViewModel {
+    init(icon: UIImage, title: String, fontSize: CGFloat) {
+        self.icon = icon
+        self.title = title
+        self.fontSize = fontSize
+    }
 }
 
 protocol ExperienceDetailsConfigurable {
@@ -46,7 +56,9 @@ extension SectionRowCell: ExperienceDetailsConfigurable {
             viewModel = .init(icon: Icon.groupOfPeople.image, title: experience.position)
         case .note:
             // TODO: Uuugh. Fix this -2 thing.
-            viewModel = .init(icon: Icon.chevronRight.image, title: experience.noteList[detailIndex-2])
+            viewModel = .init(icon: Icon.chevronRight.image,
+                              title: experience.noteList[detailIndex-2],
+                              fontSize: 14)
         }
 
     }
