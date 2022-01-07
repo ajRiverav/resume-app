@@ -35,7 +35,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Title" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUd-Y5-G2A" userLabel="End Date">
-                        <rect key="frame" x="231.5" y="10" width="166.5" height="24"/>
+                        <rect key="frame" x="235.5" y="10" width="162.5" height="24"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -52,7 +52,7 @@
                     <constraint firstAttribute="bottom" secondItem="gWp-sq-yxO" secondAttribute="bottom" constant="10" id="Sut-co-5Ff"/>
                     <constraint firstItem="LFh-Ll-Kjp" firstAttribute="top" secondItem="rpD-ar-YAw" secondAttribute="top" constant="10" id="jIg-EB-lTa"/>
                     <constraint firstAttribute="trailing" secondItem="IUd-Y5-G2A" secondAttribute="trailing" constant="16" id="sNa-Gm-aGQ"/>
-                    <constraint firstItem="IUd-Y5-G2A" firstAttribute="leading" secondItem="LFh-Ll-Kjp" secondAttribute="trailing" constant="4" id="vnh-1b-nk5"/>
+                    <constraint firstItem="IUd-Y5-G2A" firstAttribute="leading" secondItem="LFh-Ll-Kjp" secondAttribute="trailing" constant="8" id="vnh-1b-nk5"/>
                     <constraint firstAttribute="bottom" secondItem="LFh-Ll-Kjp" secondAttribute="bottom" constant="10" id="weG-ha-gwI"/>
                     <constraint firstItem="LFh-Ll-Kjp" firstAttribute="leading" secondItem="gWp-sq-yxO" secondAttribute="trailing" constant="2" id="z4H-NJ-dFE"/>
                 </constraints>

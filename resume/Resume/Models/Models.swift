@@ -16,7 +16,7 @@ struct Experience {
     var position: String
     var place: Place
     var dates: Dates
-    var description: [String] // an experience can have multiple descriptions
+    var noteList: [String] // an experience can have multiple descriptions
 }
 
 struct Place {
@@ -46,6 +46,7 @@ enum State {
     case puertoRico
     case maryland
     case districtOfColumbia
+    case florida
     case remote
 
     var displayString: String {
@@ -53,6 +54,7 @@ enum State {
         case .puertoRico: return "Puerto Rico"
         case .maryland: return "Maryland"
         case .districtOfColumbia: return "District of Columbia"
+        case .florida: return "Florida"
         case .remote: return "Remote"
         }
     }
@@ -64,6 +66,7 @@ enum State {
         case .puertoRico: return "PR"
         case .maryland: return "MD"
         case .districtOfColumbia: return "DC"
+        case .florida: return "FL"
         case .remote: return "Remote"
         }
     }
@@ -75,6 +78,8 @@ enum City {
     case washington
     case greenbelt
     case baltimore
+    case panamaCityBeach
+    case aguadilla
     case any
 
     var displayString: String {
@@ -83,8 +88,10 @@ enum City {
         case .sanJuan: return "San Juan"
         case .washington: return "Washington"
         case .greenbelt: return "Greenbelt"
-        case .any: return "Any city"
+        case .any: return "Worldwide"
         case .baltimore: return "Baltimore"
+        case .panamaCityBeach: return "Panama City Beach"
+        case .aguadilla: return "Aguadilla"
         }
     }
 }
