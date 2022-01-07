@@ -19,6 +19,7 @@ extension UINavigationController {
         tabBarItem.image = image
     }
 
+    // TODO: Hmm. Maybe we can move this override viewDidLoad here and call this? Calling this from every controller's viewDidLoad seems DRY.
     func setNavBarBackgroundColor(color: UIColor = .antiFlashWhite) {
         navigationBar.backgroundColor = color
     }
