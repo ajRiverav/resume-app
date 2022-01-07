@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 
 class SectionRowCell: UITableViewCell {
-
     @IBOutlet private weak var iconImageView: UIImageView!
     @IBOutlet private weak var iconLabel: UILabel!
 
@@ -51,7 +50,8 @@ extension SectionRowCell: ExperienceDetailsConfigurable {
     func configureWith(experience: Experience, detailType: ExperienceViewController.Section.RowType, detailIndex: Int) {
         switch detailType {
         case .location:
-            viewModel = .init(icon: Icon.pin.image, title: "\(experience.place.address.city.displayString), \(experience.place.address.state.displayString)")
+            viewModel = .init(icon: Icon.pin.image,
+                              title: "\(experience.place.address.city.displayString), \(experience.place.address.state.displayString)")
         case .position:
             viewModel = .init(icon: Icon.groupOfPeople.image, title: experience.position)
         case .note:
