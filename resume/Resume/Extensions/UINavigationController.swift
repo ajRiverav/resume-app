@@ -23,4 +23,9 @@ extension UINavigationController {
     func setNavBarBackgroundColor(color: UIColor = .antiFlashWhite) {
         navigationBar.backgroundColor = color
     }
+
+    override open func viewDidLoad() {
+        navigationBar.prefersLargeTitles = true
+        super.viewDidLoad()
+    }
 }

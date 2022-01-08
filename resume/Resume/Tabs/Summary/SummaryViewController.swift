@@ -17,8 +17,9 @@ class SummaryViewController: UIViewController {
 
 extension SummaryViewController {
     override func viewDidLoad() {
-        configureTableView()
         super.viewDidLoad()
+        configureNavBar(title: "AJ Rivera's Resume".localized)
+        configureTableView()
     }
 }
 
@@ -29,7 +30,7 @@ extension SummaryViewController {
         tableView.setBackgroundColor()
 
         [
-            SectionHeaderCell.self,
+            HighlightSectionHeaderCell.self,
             SectionRowCell.self
         ].forEach {
             tableView.register(UINib(nibName: "\($0)", bundle: nil),
@@ -42,8 +43,6 @@ extension SummaryViewController {
         tableView.dataSource = tableViewDataSource
 
         tableView.delegate = self
-
-        tableView.reloadData()
     }
 }
 
@@ -52,12 +51,12 @@ extension SummaryViewController {
 extension SummaryViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection sectionIndex: Int) -> UIView? {
         // Get section header
-        guard let sectionHeaderType = tableViewDataSource?.sectionHeader(at: sectionIndex) else {
+        guard let sectionHeaderType = tableViewDataSource?.sectionHeader(at: sectionIndex),
+              let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: sectionHeaderType.cellType.self))
+        else {
             assertionFailure("nil value")
             return UIView()
         }
-
-        let cell =  tableView.dequeueReusableCell(withIdentifier: String(describing: sectionHeaderType.cellType.self))
 
         switch sectionHeaderType {
         case .dateless(let highlight), .dateful(let highlight):
@@ -67,7 +66,7 @@ extension SummaryViewController: UITableViewDelegate {
             }
         }
 
-        return cell?.contentView
+        return cell.contentView
     }
 }
 
@@ -97,7 +96,7 @@ extension SummaryViewController.Section {
         // Implementation
         var cellType: UITableViewCell.Type {
             switch self {
-            case .dateless, .dateful: return SectionHeaderCell.self
+            case .dateless, .dateful: return HighlightSectionHeaderCell.self
             }
         }
 

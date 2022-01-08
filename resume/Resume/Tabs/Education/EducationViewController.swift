@@ -16,6 +16,16 @@ class EducationViewController: UIViewController {
 
 }
 
+// MARK: - UIViewController
+
+extension EducationViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configureNavBar(title: "education".localized)
+        configureTableView()
+    }
+}
+
 // MARK: - Methods
 
 extension EducationViewController {
@@ -36,15 +46,6 @@ extension EducationViewController {
         // TODO: move data source somewhere else for less responsibilities.
         tableView.dataSource = self
         tableView.delegate = self
-    }
-}
-
-// MARK: - UIViewController
-
-extension EducationViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        configureTableView()
     }
 }
 

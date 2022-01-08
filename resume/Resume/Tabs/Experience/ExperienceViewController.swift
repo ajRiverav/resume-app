@@ -17,8 +17,9 @@ class ExperienceViewController: UIViewController {
 
 extension ExperienceViewController {
     override func viewDidLoad() {
-        configureTableView()
         super.viewDidLoad()
+        configureNavBar(title: "experience".localized)
+        configureTableView()
     }
 }
 
@@ -43,8 +44,6 @@ extension ExperienceViewController {
         tableView.dataSource = tableViewDataSource
 
         tableView.delegate = self
-
-        tableView.reloadData()
     }
 }
 
@@ -53,12 +52,12 @@ extension ExperienceViewController {
 extension ExperienceViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection sectionIndex: Int) -> UIView? {
         // Get section header
-        guard let sectionHeaderType = tableViewDataSource?.sectionHeader(at: sectionIndex) else {
+        guard let sectionHeaderType = tableViewDataSource?.sectionHeader(at: sectionIndex),
+              let cell =  tableView.dequeueReusableCell(withIdentifier: String(describing: sectionHeaderType.cellType.self))
+        else {
             assertionFailure("nil value")
             return UIView()
         }
-
-        let cell =  tableView.dequeueReusableCell(withIdentifier: String(describing: sectionHeaderType.cellType.self))
 
         switch sectionHeaderType {
         case .job(let experience), .extracurricular(let experience):
@@ -68,7 +67,7 @@ extension ExperienceViewController: UITableViewDelegate {
             }
         }
 
-        return cell?.contentView
+        return cell.contentView
     }
 }
 
@@ -87,7 +86,6 @@ extension ExperienceViewController {
             }
         }
     }
-
 }
 
 extension ExperienceViewController.Section {
@@ -101,7 +99,6 @@ extension ExperienceViewController.Section {
             case .job, .extracurricular: return SectionHeaderCell.self
             }
         }
-
     }
 
     enum RowType: CellTypeful {

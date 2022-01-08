@@ -50,31 +50,14 @@ extension SectionHeaderCell.ViewModel {
                   endDate: education.dates.end?.formatted(as: .yyyy),
                   dateSeparator: "-", title: education.place.name)
     }
-
-    init(_ highlight: Highlight) {
-        self.init(startDate: nil,
-                  endDate: nil,
-                  dateSeparator: nil,
-                  title: highlight.title)
-    }
 }
 
 protocol ExperienceConfigurable {
     func configureWith(experience: Experience)
 }
 
-protocol HighlightConfigurable {
-    func configureWith(highlight: Highlight)
-}
-
 extension SectionHeaderCell: ExperienceConfigurable {
     func configureWith(experience: Experience) {
         viewModel = .init(experience)
-    }
-}
-
-extension SectionHeaderCell: HighlightConfigurable {
-    func configureWith(highlight: Highlight) {
-        viewModel = .init(highlight)
     }
 }
