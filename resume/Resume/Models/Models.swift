@@ -16,19 +16,24 @@ struct Experience {
     var position: String
     var place: Place
     var dates: Dates
-    var noteList: [String] // an experience can have multiple descriptions
+    var highlightList: [String]
+}
+
+struct Education {
+    var place: Place
+    var degree: String
+    var dates: Dates
+    var highlightList: [String]
+}
+
+struct Highlight {
+    var title: String
+    var itemList: [String]
 }
 
 struct Place {
     var name: String
     var address: Address
-}
-
-struct Education {
-    var place: Place // e.g. university name
-    var degree: String
-    var dates: Dates
-    var description: [String]
 }
 
 struct Address {
@@ -38,7 +43,7 @@ struct Address {
 
 struct Dates {
     var start: Date
-    // Optional because some experiences may not have end date as they are current ones.
+    // Optional because some experiences may not have end date as they are current.
     var end: Date?
 }
 

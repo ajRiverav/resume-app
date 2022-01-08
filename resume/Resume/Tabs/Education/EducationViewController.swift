@@ -56,7 +56,7 @@ extension EducationViewController: UITableViewDataSource {
     }
 
     func tableView(_: UITableView, numberOfRowsInSection educationIndex: Int) -> Int {
-        tableViewSectionRowOffset + educationList[educationIndex].description.count
+        tableViewSectionRowOffset + educationList[educationIndex].highlightList.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -85,7 +85,7 @@ extension EducationViewController: UITableViewDataSource {
             // swiftlint:disable force_cast
             let cell = tableView.dequeueReusableCell(withIdentifier: "\(SectionRowCell.self)",
                                                      for: indexPath) as! SectionRowCell
-            cell.viewModel = .init(icon: Icon.chevronRight.image, title: education.description[indexPath.row - tableViewSectionRowOffset])
+            cell.viewModel = .init(icon: Icon.chevronRight.image, title: education.highlightList[indexPath.row - tableViewSectionRowOffset])
             return cell
         }
     }

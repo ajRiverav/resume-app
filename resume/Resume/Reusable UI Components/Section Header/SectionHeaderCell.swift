@@ -16,9 +16,9 @@ class SectionHeaderCell: UITableViewCell {
 
     public var viewModel = ViewModel() {
         didSet {
-            startDate.text = viewModel.startDate
+            startDate.text = viewModel.startDate ?? ""
             endDate.text = viewModel.endDate ?? ""
-            dateSeparator.text = viewModel.dateSeparator ?? "-"
+            dateSeparator.text = viewModel.dateSeparator ?? ""
             title.text = viewModel.title
             [title, startDate, dateSeparator, endDate].forEach { $0?.textColor = viewModel.textColor }
             contentView.backgroundColor = viewModel.backgroundColor
@@ -28,7 +28,7 @@ class SectionHeaderCell: UITableViewCell {
 
 extension SectionHeaderCell {
     struct ViewModel {
-        var startDate: String = ""// TODO: make a Date instead
+        var startDate: String? // TODO: make a Date instead
         var endDate: String?      // TODO: make a Date instead
         var dateSeparator: String?
         var title: String = ""
@@ -37,11 +37,11 @@ extension SectionHeaderCell {
     }
 }
 
+// MARK: - Custom inits for the view model.
 extension SectionHeaderCell.ViewModel {
     init(_ experience: Experience) {
-
-        self.init(startDate: experience.dates.start.formatted(as: .yyyy),
-                  endDate: experience.dates.end?.formatted(as: .yyyy),
+        self.init(startDate: experience.dates.start.formatted(as: .yyyy, in: .english),
+                  endDate: experience.dates.end?.formatted(as: .yyyy, in: .english),
                   dateSeparator: "-", title: experience.place.name)
     }
 
@@ -50,17 +50,31 @@ extension SectionHeaderCell.ViewModel {
                   endDate: education.dates.end?.formatted(as: .yyyy),
                   dateSeparator: "-", title: education.place.name)
     }
+
+    init(_ highlight: Highlight) {
+        self.init(startDate: nil,
+                  endDate: nil,
+                  dateSeparator: nil,
+                  title: highlight.title)
+    }
 }
 
 protocol ExperienceConfigurable {
     func configureWith(experience: Experience)
 }
 
+protocol HighlightConfigurable {
+    func configureWith(highlight: Highlight)
+}
+
 extension SectionHeaderCell: ExperienceConfigurable {
     func configureWith(experience: Experience) {
-        viewModel = .init(startDate: experience.dates.start.formatted(as: .yyyy, in: .english),
-                          endDate: experience.dates.end?.formatted(as: .yyyy, in: .english),
-                          dateSeparator: "-",
-                          title: experience.place.name)
+        viewModel = .init(experience)
+    }
+}
+
+extension SectionHeaderCell: HighlightConfigurable {
+    func configureWith(highlight: Highlight) {
+        viewModel = .init(highlight)
     }
 }

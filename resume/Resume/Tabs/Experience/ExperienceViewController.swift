@@ -13,6 +13,15 @@ class ExperienceViewController: UIViewController {
     private var tableViewDataSource: ExperienceTableViewDataSource?
 }
 
+// MARK: - UIViewController
+
+extension ExperienceViewController {
+    override func viewDidLoad() {
+        configureTableView()
+        super.viewDidLoad()
+    }
+}
+
 // MARK: - Methods
 
 extension ExperienceViewController {
@@ -36,15 +45,6 @@ extension ExperienceViewController {
         tableView.delegate = self
 
         tableView.reloadData()
-    }
-}
-
-// MARK: - UIViewController
-
-extension ExperienceViewController {
-    override func viewDidLoad() {
-        configureTableView()
-        super.viewDidLoad()
     }
 }
 
@@ -107,12 +107,12 @@ extension ExperienceViewController.Section {
     enum RowType: CellTypeful {
         case location
         case position
-        case note
+        case highlight
 
         // Implementation
         var cellType: UITableViewCell.Type {
             switch self {
-            case .location, .position, .note: return SectionRowCell.self
+            case .location, .position, .highlight: return SectionRowCell.self
             }
         }
     }

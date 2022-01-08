@@ -13,25 +13,25 @@ class SectionRowCell: UITableViewCell {
     @IBOutlet private weak var iconLabel: UILabel!
 
     public var viewModel = ViewModel() {
-      didSet {
-          iconImageView.isHidden = (viewModel.icon == nil)
-          iconImageView.image = viewModel.icon
-          iconLabel.text = viewModel.title
-          iconLabel.textColor = viewModel.textColor
-          contentView.backgroundColor = viewModel.backgroundColor
-          iconLabel.font = UIFont(name: iconLabel.font.familyName, size: viewModel.fontSize)
-      }
+        didSet {
+            iconImageView.isHidden = (viewModel.icon == nil)
+            iconImageView.image = viewModel.icon
+            iconLabel.text = viewModel.title
+            iconLabel.textColor = viewModel.textColor
+            contentView.backgroundColor = viewModel.backgroundColor
+            iconLabel.font = UIFont(name: iconLabel.font.familyName, size: viewModel.fontSize)
+        }
     }
 }
 
 extension SectionRowCell {
-  struct ViewModel {
-      var icon: UIImage?
-      var title: String = ""
-      var textColor: UIColor = .chineseBlack
-      var backgroundColor: UIColor = .antiFlashWhite
-      var fontSize: CGFloat = 17
-  }
+    struct ViewModel {
+        var icon: UIImage?
+        var title: String = ""
+        var textColor: UIColor = .chineseBlack
+        var backgroundColor: UIColor = .antiFlashWhite
+        var fontSize: CGFloat = 17
+    }
 }
 
 extension SectionRowCell.ViewModel {
@@ -40,10 +40,21 @@ extension SectionRowCell.ViewModel {
         self.title = title
         self.fontSize = fontSize
     }
+
+    init(icon: UIImage, title: String) {
+        self.icon
+        self.title
+    }
 }
 
 protocol ExperienceDetailsConfigurable {
-    func configureWith(experience: Experience, detailType: ExperienceViewController.Section.RowType, detailIndex: Int)
+    func configureWith(experience: Experience,
+                       detailType: ExperienceViewController.Section.RowType, detailIndex: Int)
+}
+
+protocol HighlightDetailsConfigurable {
+    func configureWith(highlightDetail: String,
+                       detailType: SummaryViewController.Section.RowType)
 }
 
 extension SectionRowCell: ExperienceDetailsConfigurable {
@@ -54,11 +65,22 @@ extension SectionRowCell: ExperienceDetailsConfigurable {
                               title: "\(experience.place.address.city.displayString), \(experience.place.address.state.displayString)")
         case .position:
             viewModel = .init(icon: Icon.groupOfPeople.image, title: experience.position)
-        case .note:
+        case .highlight:
             // TODO: Uuugh. Fix this -2 thing.
             viewModel = .init(icon: Icon.chevronRight.image,
-                              title: experience.noteList[detailIndex-2],
+                              title: experience.highlightList[detailIndex-2],
                               fontSize: 14)
+        }
+
+    }
+}
+
+extension SectionRowCell: HighlightDetailsConfigurable {
+    func configureWith(highlightDetail: String, detailType: SummaryViewController.Section.RowType) {
+        switch detailType {
+        case .summary:
+            viewModel = .init(icon: Icon.chevronRight.image,
+                              title: highlightDetail)
         }
 
     }
