@@ -42,8 +42,8 @@ extension SectionRowCell.ViewModel {
     }
 
     init(icon: UIImage, title: String) {
-        self.icon
-        self.title
+        self.icon = icon
+        self.title = title
     }
 }
 
@@ -55,6 +55,11 @@ protocol ExperienceDetailsConfigurable {
 protocol HighlightDetailsConfigurable {
     func configureWith(highlightDetail: String,
                        detailType: SummaryViewController.Section.RowType)
+}
+
+protocol EducationDetailsConfigurable {
+    func configureWith(education: Education,
+                       detailType: EducationViewController.Section.RowType, detailIndex: Int)
 }
 
 extension SectionRowCell: ExperienceDetailsConfigurable {
@@ -83,5 +88,22 @@ extension SectionRowCell: HighlightDetailsConfigurable {
                               title: highlightDetail)
         }
 
+    }
+}
+
+extension SectionRowCell: EducationDetailsConfigurable {
+    func configureWith(education: Education, detailType: EducationViewController.Section.RowType, detailIndex: Int) {
+        switch detailType {
+        case .degree:
+            viewModel = .init(icon: Icon.diploma.image, title: education.degree)
+        case .location:
+            viewModel = .init(icon: Icon.pin.image,
+                              title: "\(education.place.address.city.displayString), \(education.place.address.state.displayString)")
+        case .highlight:
+            // TODO: Uuugh. Fix this -2 thing.
+            viewModel = .init(icon: Icon.chevronRight.image,
+                              title: education.highlightList[detailIndex-2],
+                              fontSize: 14)
+        }
     }
 }

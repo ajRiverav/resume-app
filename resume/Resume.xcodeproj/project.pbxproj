@@ -23,6 +23,7 @@
 		21362EB52789D14D00A26778 /* HighlightSectionHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21362EB42789D14D00A26778 /* HighlightSectionHeaderCell.swift */; };
 		21362EB92789D2B800A26778 /* HighlightSectionHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21362EB82789D2B800A26778 /* HighlightSectionHeaderCell.xib */; };
 		21362EBB2789F3AD00A26778 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21362EBA2789F3AD00A26778 /* UIViewController.swift */; };
+		21362EBD278A600600A26778 /* EducationTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21362EBC278A600600A26778 /* EducationTableViewDataSource.swift */; };
 		21480F1A277E3340005D2907 /* SectionHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21480F18277E3340005D2907 /* SectionHeaderCell.xib */; };
 		21480F1B277E3340005D2907 /* SectionHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21480F19277E3340005D2907 /* SectionHeaderCell.swift */; };
 		21480F1D277E3704005D2907 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21480F1C277E3704005D2907 /* Icon.swift */; };
@@ -62,6 +63,7 @@
 		21362EB42789D14D00A26778 /* HighlightSectionHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightSectionHeaderCell.swift; sourceTree = "<group>"; };
 		21362EB82789D2B800A26778 /* HighlightSectionHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HighlightSectionHeaderCell.xib; sourceTree = "<group>"; };
 		21362EBA2789F3AD00A26778 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		21362EBC278A600600A26778 /* EducationTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationTableViewDataSource.swift; sourceTree = "<group>"; };
 		21480F18277E3340005D2907 /* SectionHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SectionHeaderCell.xib; sourceTree = "<group>"; };
 		21480F19277E3340005D2907 /* SectionHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionHeaderCell.swift; sourceTree = "<group>"; };
 		21480F1C277E3704005D2907 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 				211AE7A22780D62800BA1937 /* Education.storyboard */,
 				21D396B2277CDAF1007ECA78 /* EducationNavController.swift */,
 				211AE7A42780D65100BA1937 /* EducationViewController.swift */,
+				21362EBC278A600600A26778 /* EducationTableViewDataSource.swift */,
 			);
 			path = Education;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				21362EAA2788C4BF00A26778 /* UITabBarController.swift in Sources */,
 				21D396BF277CEA87007ECA78 /* UINavigationController.swift in Sources */,
 				217A1192277BBB46007977CC /* Date.swift in Sources */,
+				21362EBD278A600600A26778 /* EducationTableViewDataSource.swift in Sources */,
 				21D396C7277D09E7007ECA78 /* ExperienceViewController.swift in Sources */,
 				21362EB52789D14D00A26778 /* HighlightSectionHeaderCell.swift in Sources */,
 				21D396BB277CDD5B007ECA78 /* String.swift in Sources */,

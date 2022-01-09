@@ -10,10 +10,7 @@ import UIKit
 
 class EducationViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
-
-    // every education has a X (e.g. X) AND X (X).
-    let tableViewSectionRowOffset = 2
-
+    private var tableViewDataSource: EducationTableViewDataSource?
 }
 
 // MARK: - UIViewController
@@ -42,52 +39,54 @@ extension EducationViewController {
                              forCellReuseIdentifier: "\($0)")
         }
 
-        // This view controller handles all about the table view.
-        // TODO: move data source somewhere else for less responsibilities.
-        tableView.dataSource = self
+        // Separation of concerns: data source
+        let tableViewDataSource = EducationTableViewDataSource(educationList: educationList)
+        self.tableViewDataSource = tableViewDataSource
+        tableView.dataSource = tableViewDataSource
+
         tableView.delegate = self
     }
 }
 
-// MARK: - UITableViewDataSource
+// MARK: - Section
+/// Define the building blocks for this vc's table view data source. The actual structure/order will
+/// be defined in the data source.
+extension EducationViewController {
+    // VC can have multiple section types. For now, only 1 exists.
+    enum Section {
+        case education(HeaderType, [RowType])
 
-extension EducationViewController: UITableViewDataSource {
-    func numberOfSections(in _: UITableView) -> Int {
-        educationList.count
+        /// Returns the section header and section rows.
+        var section: (HeaderType, [RowType]) {
+            switch self {
+            case let .education(header, rows): return (header, rows)
+            }
+        }
+    }
+}
+
+extension EducationViewController.Section {
+    enum HeaderType: CellTypeful {
+        case college(Education)
+
+        // Implementation
+        var cellType: UITableViewCell.Type {
+            switch self {
+            case .college: return SectionHeaderCell.self
+            }
+        }
     }
 
-    func tableView(_: UITableView, numberOfRowsInSection educationIndex: Int) -> Int {
-        tableViewSectionRowOffset + educationList[educationIndex].highlightList.count
-    }
+    enum RowType: CellTypeful {
+        case degree
+        case location
+        case highlight
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-        let education = educationList[indexPath.section]
-
-        // TODO: too many responsibilities here. Probably it makes sense to create a class for the data source.
-        switch indexPath.row {
-        case 0:
-            // swiftlint:disable force_cast
-            let cell = tableView.dequeueReusableCell(withIdentifier: "\(SectionRowCell.self)",
-                                                     for: indexPath) as! SectionRowCell
-
-            cell.viewModel = .init(icon: Icon.pin.image,
-                                   title: "\(education.place.address.city.displayString), \(education.place.address.state.displayString)")
-
-            return cell
-        case 1:
-            // swiftlint:disable force_cast
-            let cell = tableView.dequeueReusableCell(withIdentifier: "\(SectionRowCell.self)",
-                                                     for: indexPath) as! SectionRowCell
-            cell.viewModel = .init(icon: Icon.diploma.image, title: education.degree)
-            return cell
-
-        default:
-            // swiftlint:disable force_cast
-            let cell = tableView.dequeueReusableCell(withIdentifier: "\(SectionRowCell.self)",
-                                                     for: indexPath) as! SectionRowCell
-            cell.viewModel = .init(icon: Icon.chevronRight.image, title: education.highlightList[indexPath.row - tableViewSectionRowOffset])
-            return cell
+        // Implementation
+        var cellType: UITableViewCell.Type {
+            switch self {
+            case .degree, .location, .highlight: return SectionRowCell.self
+            }
         }
     }
 }
@@ -95,12 +94,21 @@ extension EducationViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 
 extension EducationViewController: UITableViewDelegate {
-    // Setting Header Customised View
-    func tableView(_ tableView: UITableView, viewForHeaderInSection educationIndex: Int) -> UIView? {
-        // swiftlint:disable force_cast
-        let cell = tableView.dequeueReusableCell(withIdentifier: "\(SectionHeaderCell.self)") as! SectionHeaderCell
+    func tableView(_ tableView: UITableView, viewForHeaderInSection sectionIndex: Int) -> UIView? {
+        // Get section header
+        guard let sectionHeaderType = tableViewDataSource?.sectionHeader(at: sectionIndex),
+              let cell =  tableView.dequeueReusableCell(withIdentifier: String(describing: sectionHeaderType.cellType.self))
+        else {
+            assertionFailure("nil value")
+            return UIView()
+        }
 
-        cell.viewModel = .init(educationList[educationIndex])
+        switch sectionHeaderType {
+        case .college(let education):
+            if let configurableCell = cell as? EducationConfigurable {
+                configurableCell.configureWith(education: education)
+            }
+        }
 
         return cell.contentView
     }

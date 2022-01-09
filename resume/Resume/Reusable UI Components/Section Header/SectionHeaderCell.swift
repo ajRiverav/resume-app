@@ -56,8 +56,18 @@ protocol ExperienceConfigurable {
     func configureWith(experience: Experience)
 }
 
+protocol EducationConfigurable {
+    func configureWith(education: Education)
+}
+
 extension SectionHeaderCell: ExperienceConfigurable {
     func configureWith(experience: Experience) {
         viewModel = .init(experience)
+    }
+}
+
+extension SectionHeaderCell: EducationConfigurable {
+    func configureWith(education: Education) {
+        viewModel = .init(education)
     }
 }
