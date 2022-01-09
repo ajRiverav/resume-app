@@ -98,7 +98,7 @@ let experienceList: [Experience] = [
     Experience(position: "Software Engineer",
                place: Place(name: "Dept. of the Navy (NAVSEA)", address: panamaCityBeach),
                dates: Dates(start: UnixTime.sep2010.toDate,
-                            end: UnixTime.mar2015.toDate),
+                            end: UnixTime.jan2013.toDate),
                highlightList: ["Worked on a communications system between a navy ship and unmanned vehicles"]),
     // --------------------------------------------------------------------------------------------------------
     // --------------------------------------------------------------------------------------------------------
