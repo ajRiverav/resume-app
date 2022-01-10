@@ -26,7 +26,7 @@ enum WebLink {
             #else
             return "https://apps.apple.com/app/apag%C3%B3n-app/id1362697139"
             #endif
-        case .email: return "mailto:aj.rivera@jhu.edu&subject=Employment%20Offer"
+        case .email: return "mailto:anrivel@gmail.com&subject=Employment%20Offer"
         }
     }
 }

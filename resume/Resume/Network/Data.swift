@@ -138,7 +138,7 @@ let highlightList: [Highlight] = [
               ]),
     Highlight(title: "Online accounts/repositories",
               emphasisList: [
-                Emphasis(title: "Email: aj.rivera@jhu.edu", webLink: .email),
+                Emphasis(title: "Email: anrivel@gmail.com", webLink: .email),
                 Emphasis(title: "This app's source code", webLink: .resumeAppRepository),
                 Emphasis(title: "Github account", webLink: .github),
                 Emphasis(title: "Gitlab account", webLink: .gitlab)
