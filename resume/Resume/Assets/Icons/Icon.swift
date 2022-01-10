@@ -33,6 +33,7 @@ enum Icon {
     }
 
     /// Some icons require attribution to be use for free.
+    // TODO: create section for attributions.
     var attribution: String? {
         switch self {
             // TODO: DRY -> make string a template
@@ -41,7 +42,6 @@ enum Icon {
         case .maleStudent: return nil
         case .pin, .groupOfPeople, .chevronRight: return "Icon by https://freeicons.io/profile/3 icon king1 on https://freeicons.io"
         case .diploma: return "Icon by https://freeicons.io/profile/8942 Alex Martynov on https://freeicons.io"
-
         }
     }
 }

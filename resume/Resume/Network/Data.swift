@@ -44,7 +44,7 @@ let experienceList: [Experience] = [
                 Emphasis(title: "Qualtics was a software startup focused on developing software tools to help utility companies quickly identify outage magnitude and location using customers smartphones, reducing the need of expensive digital meters."),
                 Emphasis(title: "Technical responsibilities: UX design and iOS development. Administrative responsibilities: strategic vision and execution, proposal writing, employee management, customer care, company finances."),
                 Emphasis(title: "Launched proof-of-concept iOS app. Contributed to the UX/UI design and more than 50% of the iOS app. As of Jan 2, 2022, the app is still available on the App Store (apple.co/3tb0mJm)",
-                         link: Link.apagonApp),
+                         link: WebLink.apagonApp),
                 Emphasis(title: "Wrote proposals and led meetings that helped Qualtics raise $95,000 of equity-free funding from different sources including a startup accelerator/app competition."),
                 Emphasis(title: "Attained a ~$500,000 contract with a utility company for the development of a customized native mobile app (Android + iOS) and web app (React). Led a 5-member team in the development and delivery of v1.0 of the iOS and web apps.")
                ]),

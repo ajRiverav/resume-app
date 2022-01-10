@@ -28,6 +28,9 @@
 		21362EC6278BEA8200A26778 /* ExperienceCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21362EC5278BEA8200A26778 /* ExperienceCoordinator.swift */; };
 		21362EC8278C81EE00A26778 /* UnixTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21362EC7278C81EE00A26778 /* UnixTime.swift */; };
 		21362ECA278C823F00A26778 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21362EC9278C823F00A26778 /* Language.swift */; };
+		21362ECC278C89AD00A26778 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21362ECB278C89AD00A26778 /* City.swift */; };
+		21362ECE278C89C800A26778 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21362ECD278C89C800A26778 /* State.swift */; };
+		21362ED0278C89E300A26778 /* WebLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21362ECF278C89E300A26778 /* WebLink.swift */; };
 		21480F1A277E3340005D2907 /* SectionHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21480F18277E3340005D2907 /* SectionHeaderCell.xib */; };
 		21480F1B277E3340005D2907 /* SectionHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21480F19277E3340005D2907 /* SectionHeaderCell.swift */; };
 		21480F1D277E3704005D2907 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21480F1C277E3704005D2907 /* Icon.swift */; };
@@ -72,6 +75,9 @@
 		21362EC5278BEA8200A26778 /* ExperienceCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceCoordinator.swift; sourceTree = "<group>"; };
 		21362EC7278C81EE00A26778 /* UnixTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnixTime.swift; sourceTree = "<group>"; };
 		21362EC9278C823F00A26778 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		21362ECB278C89AD00A26778 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		21362ECD278C89C800A26778 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		21362ECF278C89E300A26778 /* WebLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebLink.swift; sourceTree = "<group>"; };
 		21480F18277E3340005D2907 /* SectionHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SectionHeaderCell.xib; sourceTree = "<group>"; };
 		21480F19277E3340005D2907 /* SectionHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionHeaderCell.swift; sourceTree = "<group>"; };
 		21480F1C277E3704005D2907 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
@@ -201,6 +207,9 @@
 				217A118E277BB6D0007977CC /* Models.swift */,
 				21362EC7278C81EE00A26778 /* UnixTime.swift */,
 				21362EC9278C823F00A26778 /* Language.swift */,
+				21362ECB278C89AD00A26778 /* City.swift */,
+				21362ECD278C89C800A26778 /* State.swift */,
+				21362ECF278C89E300A26778 /* WebLink.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -417,8 +426,10 @@
 				21D396C7277D09E7007ECA78 /* ExperienceViewController.swift in Sources */,
 				21362EB52789D14D00A26778 /* HighlightSectionHeaderCell.swift in Sources */,
 				21D396BB277CDD5B007ECA78 /* String.swift in Sources */,
+				21362ECE278C89C800A26778 /* State.swift in Sources */,
 				21480F1D277E3704005D2907 /* Icon.swift in Sources */,
 				21D396BD277CE889007ECA78 /* SummaryNavController.swift in Sources */,
+				21362ED0278C89E300A26778 /* WebLink.swift in Sources */,
 				217A117A277BB2A0007977CC /* AppDelegate.swift in Sources */,
 				21D396B3277CDAF1007ECA78 /* EducationNavController.swift in Sources */,
 				217A117C277BB2A0007977CC /* SceneDelegate.swift in Sources */,
@@ -433,6 +444,7 @@
 				21362EAE2788E2F900A26778 /* SummaryViewController.swift in Sources */,
 				211AE7A727834A0200BA1937 /* ExperienceTableViewDataSource.swift in Sources */,
 				21362EB02788E35F00A26778 /* SummaryTableViewDataSource.swift in Sources */,
+				21362ECC278C89AD00A26778 /* City.swift in Sources */,
 				21362EA82788C26600A26778 /* UITableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
