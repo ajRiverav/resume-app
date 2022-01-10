@@ -73,7 +73,7 @@ extension SectionRowCell: ExperienceDetailsConfigurable {
         case .highlight:
             // TODO: Uuugh. Fix this -2 thing.
             viewModel = .init(icon: Icon.chevronRight.image,
-                              title: experience.highlightList[detailIndex-2],
+                              title: experience.emphasisList[detailIndex-2].title,
                               fontSize: 14)
         }
 
@@ -86,6 +86,7 @@ extension SectionRowCell: HighlightDetailsConfigurable {
         case .summary:
             viewModel = .init(icon: Icon.chevronRight.image,
                               title: highlightDetail)
+        default: return
         }
 
     }
@@ -102,8 +103,9 @@ extension SectionRowCell: EducationDetailsConfigurable {
         case .highlight:
             // TODO: Uuugh. Fix this -2 thing.
             viewModel = .init(icon: Icon.chevronRight.image,
-                              title: education.highlightList[detailIndex-2],
+                              title: education.emphasistList[detailIndex-2],
                               fontSize: 14)
+
         }
     }
 }

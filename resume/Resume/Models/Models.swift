@@ -16,19 +16,34 @@ struct Experience {
     var position: String
     var place: Place
     var dates: Dates
-    var highlightList: [String]
+    var emphasisList: [Emphasis]
 }
 
 struct Education {
     var place: Place
     var degree: String
     var dates: Dates
-    var highlightList: [String]
+    var emphasistList: [String]
+}
+
+struct Emphasis {
+    var title: String
+    var link: Link?
+
+    init(title: String, link: Link) {
+        self.title = title
+        self.link = link
+    }
+
+    init(title: String) {
+        self.title = title
+        link = nil
+    }
 }
 
 struct Highlight {
     var title: String
-    var itemList: [String]
+    var emphasisList: [Emphasis]
 }
 
 struct Place {
@@ -97,6 +112,23 @@ enum City {
         case .baltimore: return "Baltimore"
         case .panamaCityBeach: return "Panama City Beach"
         case .aguadilla: return "Aguadilla"
+        }
+    }
+}
+
+enum Link {
+    case github
+    case gitlab
+    case resumeAppRepository
+    case appStoreApagonApp
+
+    var urlAsString: String {
+        switch self {
+        case .github: return "https://github.com/ajriverav"
+        case .gitlab: return "https://gitlab.com/ajriverav"
+        case .resumeAppRepository: return "https://github.com/ajRiverav/resume-app"
+        case .appStoreApagonApp: return "https://apps.apple.com/us/app/apagón-app/id1362697139"
+
         }
     }
 }

@@ -45,8 +45,7 @@ extension SummaryTableViewDataSource: UITableViewDataSource {
         switch sectionHeaderType {
         case .dateless(let highlight), .dateful(let highlight):
             if let configurableCell = cell as? HighlightDetailsConfigurable {
-
-                configurableCell.configureWith(highlightDetail: highlight.itemList[indexPath.row],
+                configurableCell.configureWith(highlightDetail: highlight.emphasisList[indexPath.row].title,
                                                detailType: .summary)
             }
         }
@@ -71,7 +70,7 @@ extension SummaryTableViewDataSource {
                 let header = SummaryViewController.Section.HeaderType.dateless(highlight)
 
                 var rows = [SummaryViewController.Section.RowType]()
-                _ = highlight.itemList.map {_ in rows.append(.summary)}
+                _ = highlight.emphasisList.map {_ in rows.append(.summary)}
 
                 sectionList.append(SummaryViewController.Section.highlight(header, rows))
             }

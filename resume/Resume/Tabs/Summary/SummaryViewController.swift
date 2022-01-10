@@ -8,9 +8,13 @@
 import Foundation
 import UIKit
 
-class SummaryViewController: UIViewController {
+class SummaryViewController: UIViewController, SummaryCoordinated {
     @IBOutlet private weak var tableView: UITableView!
     private var tableViewDataSource: SummaryTableViewDataSource?
+
+    // Implementation
+    weak var summaryCoordinator: SummaryCoordinator?
+
 }
 
 // MARK: - UIViewController
@@ -68,6 +72,10 @@ extension SummaryViewController: UITableViewDelegate {
 
         return cell.contentView
     }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        summaryCoordinator?.didSelectRow(self, tableView: tableView, indexPath: indexPath)
+    }
 }
 
 // MARK: - Section
@@ -104,11 +112,13 @@ extension SummaryViewController.Section {
 
     enum RowType: CellTypeful {
         case summary
+        case link
 
         // Implementation
         var cellType: UITableViewCell.Type {
             switch self {
             case .summary: return SectionRowCell.self
+            case .link: return LinkCell.self
             }
         }
     }

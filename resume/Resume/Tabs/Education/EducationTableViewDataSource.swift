@@ -79,7 +79,7 @@ extension EducationTableViewDataSource {
                 var rows = [EducationViewController.Section.RowType]()
                 rows.append(.degree)
                 rows.append(.location)
-                _ = education.highlightList.map {_ in rows.append(.highlight)}
+                _ = education.emphasistList.map {_ in rows.append(.highlight)}
 
                 sectionList.append(EducationViewController.Section.education(header, rows))
             }
