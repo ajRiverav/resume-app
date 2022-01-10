@@ -22,7 +22,7 @@ class SummaryViewController: UIViewController, SummaryCoordinated {
 extension SummaryViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureNavBar(title: "AJ Rivera's Resume".localized)
+        configureNavBar(title: LocalizableString.ajRiveraResume.localized)
         configureTableView()
     }
 }

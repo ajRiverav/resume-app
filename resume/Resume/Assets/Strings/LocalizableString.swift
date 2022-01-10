@@ -12,6 +12,7 @@ enum LocalizableString {
     case education
     case experience
     case summary
+    case ajRiveraResume
 
     /// Computed property is used because raw values requires literals. 
     var localized: String {
@@ -19,6 +20,7 @@ enum LocalizableString {
         case .education: return "education".localized
         case .experience: return "experience".localized
         case .summary: return "summary".localized
+        case .ajRiveraResume: return "AJ Rivera's resume".localized
         }
     }
 }
