@@ -25,7 +25,6 @@ extension SummaryCoordinator: Coordinator {
     }
 }
 
-// Screens
 extension SummaryCoordinator {
     public func didSelectRow(_ viewController: SummaryViewController, tableView: UITableView, indexPath: IndexPath) {
         guard let dataSource = tableView.dataSource as? SummaryTableViewDataSource

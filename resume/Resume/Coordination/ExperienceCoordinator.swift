@@ -25,7 +25,6 @@ extension ExperienceCoordinator: Coordinator {
     }
 }
 
-// Screens
 extension ExperienceCoordinator {
     public func didSelectRow(_ viewController: ExperienceViewController, tableView: UITableView, indexPath: IndexPath) {
 
