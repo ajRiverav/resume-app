@@ -12,6 +12,7 @@ enum WebLink {
     case gitlab
     case resumeAppRepository
     case apagonApp
+    case email
 
     var urlAsString: String {
         switch self {
@@ -25,6 +26,7 @@ enum WebLink {
             #else
             return "https://apps.apple.com/app/apag%C3%B3n-app/id1362697139"
             #endif
+        case .email: return "mailto:aj.rivera@jhu.edu&subject=Employment%20Offer"
         }
     }
 }

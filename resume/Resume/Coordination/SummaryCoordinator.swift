@@ -30,7 +30,7 @@ extension SummaryCoordinator {
 
         switch dataSource.sectionHeader(at: indexPath.section) {
         case .dateful(let highlight), .dateless(let highlight):
-            guard let urlString = highlight.emphasisList[indexPath.row].link?.urlAsString,
+            guard let urlString = highlight.emphasisList[indexPath.row].webLink?.urlAsString,
                     let url = URL(string: urlString)
             else { return }
             UIApplication.shared.open(url, options: [:])

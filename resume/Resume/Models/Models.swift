@@ -28,16 +28,16 @@ struct Education {
 
 struct Emphasis {
     var title: String
-    var link: WebLink?
+    var webLink: WebLink?
 
     init(title: String, webLink: WebLink) {
         self.title = title
-        self.link = webLink
+        self.webLink = webLink
     }
 
     init(title: String) {
         self.title = title
-        link = nil
+        webLink = nil
     }
 }
 

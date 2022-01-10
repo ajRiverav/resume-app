@@ -36,7 +36,7 @@ extension ExperienceCoordinator {
             switch sectionRowType {
             case .emphasis:
                 // Ugh. Figure out how to fix the -2.
-                guard let urlString = experience.emphasisList[indexPath.row-2].link?.urlAsString,
+                guard let urlString = experience.emphasisList[indexPath.row-2].webLink?.urlAsString,
                       let url = URL(string: urlString)
                 else { return }
 

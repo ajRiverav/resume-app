@@ -31,8 +31,8 @@ let experienceList: [Experience] = [
                emphasisList: [
                 Emphasis(title: "CompuMED is a startup focusing on the development of a proprietary home health management software."),
                 Emphasis(title: "Technical responsibilities: fullstack development with React and NodeJS + TypeScript, automated end-to-end test development with Cypress.io, frontend deployment with AWS CloudFront + S3, backend deployment with AWS Elastic Beanstalk, usability testing."),
-                Emphasis(title: "Administrative responsibilities:: product management, proposal writing, employee management, company finances."),
-                Emphasis(title: "Accomplishments: Led a 4-member team in the development of v1.0 currently used by 1st paying customer (~40 users) on the field and in offices (tablets + desktops).")
+                Emphasis(title: "Administrative responsibilities: product management, proposal writing, employee management, company finances."),
+                Emphasis(title: "Accomplishments: Led a 4-member team in the development of v1.0 currently used by 1st paying customer (~40 users on the field and in offices using tablets and desktops).")
                ]),
     // --------------------------------------------------------------------------------------------------------
     // --------------------------------------------------------------------------------------------------------
@@ -45,7 +45,7 @@ let experienceList: [Experience] = [
                 Emphasis(title: "Technical responsibilities: UX design and iOS development. Administrative responsibilities: strategic vision and execution, proposal writing, employee management, customer care, company finances."),
                 Emphasis(title: "Launched proof-of-concept iOS app. Contributed to the UX/UI design and more than 50% of the iOS app. As of Jan 2, 2022, the app is still available on the App Store (apple.co/3tb0mJm)",
                          webLink: WebLink.apagonApp),
-                Emphasis(title: "Wrote proposals and led meetings that helped Qualtics raise $95,000 of equity-free funding from different sources including a startup accelerator/app competition."),
+                Emphasis(title: "Wrote proposals and led technical meetings that helped Qualtics raise $95,000 of equity-free funding from different sources including a startup accelerator/app competition."),
                 Emphasis(title: "Attained a ~$500,000 contract with a utility company for the development of a customized native mobile app (Android + iOS) and web app (React). Led a 5-member team in the development and delivery of v1.0 of the iOS and web apps.")
                ]),
     // --------------------------------------------------------------------------------------------------------
@@ -55,9 +55,9 @@ let experienceList: [Experience] = [
                dates: Dates(start: UnixTime.mar2015.toDate,
                             end: UnixTime.apr2018.toDate),
                emphasisList: [
-                Emphasis(title: "Led the design, development, and testing of a tracker system for a proof-of-concept radar named Flexible Distributed Array Radar (FlexDAR). Code written in both MATLAB (for rapid prototyping) and C++ (for the real-time system)."),
+                Emphasis(title: "Led the design, development, and testing of a tracker system for a proof-of-concept radar named Flexible Distributed Array Radar. Code written in both MATLAB (for rapid prototyping) and C++ (for the real-time system)."),
                 Emphasis(title: "Developed the Functional Design Document for the tracker system where details about the implementation are discussed. This required knowledge of Kalman filters, data processing, statistical models, statistical hypothesis testing, and data association algorithms."),
-                Emphasis(title: "Developed Python scripts used for statistical analyses (e.g. calculating the variance of non-stationary schothastic processes).")
+                Emphasis(title: "Developed Python scripts used for statistical analyses (e.g. calculating the variance of non-stationary stochastic processes).")
                ]),
     // --------------------------------------------------------------------------------------------------------
     // --------------------------------------------------------------------------------------------------------
@@ -129,7 +129,7 @@ let educationList: [Education] = [
 let highlightList: [Highlight] = [
     Highlight(title: "Summary",
               emphasisList: [
-                Emphasis(title: "Software engineer/data scientist with over 10 years of experience in scientific and web programming. Proven interest in finance. Firm believer in Capital One brand: 11+ year customer since the ING Orange Account days.")]),
+                Emphasis(title: "Software engineer/data scientist with over 10 years of experience in scientific and web programming. Proven interest in finance. Firm believer in the Capital One brand: 11+ year customer since the ING Orange Account days.")]),
     Highlight(title: "Programming Languages & Tools",
               emphasisList: [
                 Emphasis(title: "Web Programming: Swift/iOS (UIKit, WebKit), React-Native (iOS), React, NodeJS+Typescript, GraphQL."),
@@ -138,8 +138,9 @@ let highlightList: [Highlight] = [
               ]),
     Highlight(title: "Online accounts/repositories",
               emphasisList: [
+                Emphasis(title: "Email: aj.rivera@jhu.edu", webLink: .email),
                 Emphasis(title: "This app's source code", webLink: .resumeAppRepository),
-                Emphasis(title: "AJ's Github account", webLink: .github),
-                Emphasis(title: "AJ's Gitlab account", webLink: .gitlab)
+                Emphasis(title: "Github account", webLink: .github),
+                Emphasis(title: "Gitlab account", webLink: .gitlab)
               ])
 ]
