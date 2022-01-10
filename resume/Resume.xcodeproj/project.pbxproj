@@ -593,7 +593,7 @@
 				DEVELOPMENT_TEAM = 6H647UGRRJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Resume/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "AJ's resume";
+				INFOPLIST_KEY_CFBundleDisplayName = "AJ's Resume";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -624,7 +624,7 @@
 				DEVELOPMENT_TEAM = 6H647UGRRJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Resume/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "AJ's resume";
+				INFOPLIST_KEY_CFBundleDisplayName = "AJ's Resume";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
