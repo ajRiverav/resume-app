@@ -11,12 +11,12 @@ import UIKit
 extension UITabBarController {
     override open func awakeFromNib() {
         super.awakeFromNib()
-        configureTabBar()
+        configure()
     }
 }
 
 private extension UITabBarController {
-    func configureTabBar() {
+    func configure() {
         setTabBarBackgroundColor()
     }
 

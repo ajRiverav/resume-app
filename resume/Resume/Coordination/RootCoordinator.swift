@@ -17,7 +17,8 @@ protocol RootCoordinated: AnyObject {
     var rootCoordinator: RootCoordinator? { get set }
 }
 
-// MARK: - MainFlowCoordinator
+/// The root coordinator orchestrates vc flow while it helps with separation of concerns.
+/// Each tab gets its own child coordinator if needed.
 class RootCoordinator: NSObject {
     let summaryCoordinator = SummaryCoordinator()
     let experienceCoordinator = ExperienceCoordinator()
@@ -29,7 +30,7 @@ class RootCoordinator: NSObject {
     }
 }
 
-// MARK: Coordinator
+// MARK: Implementation
 extension RootCoordinator: Coordinator {
     func configure(viewController: UIViewController) {
         (viewController as? RootCoordinated)?.rootCoordinator = self

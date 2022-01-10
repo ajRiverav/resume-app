@@ -11,6 +11,7 @@ import UIKit
 class ExperienceNavController: UINavigationController {
     override func awakeFromNib() {
         super.awakeFromNib()
+        // defaults
         setTabBarItemTitle(LocalizableString.experience.localized)
         setTabBarItemImage(Icon.crane.image)
     }

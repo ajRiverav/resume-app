@@ -10,6 +10,7 @@ import UIKit
 
 class SummaryViewController: UIViewController, SummaryCoordinated {
     @IBOutlet private weak var tableView: UITableView!
+
     private var tableViewDataSource: SummaryTableViewDataSource?
 
     // Implementation
@@ -53,7 +54,6 @@ extension SummaryViewController {
 
 extension SummaryViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection sectionIndex: Int) -> UIView? {
-        // Get section header
         guard let sectionHeaderType = tableViewDataSource?.sectionHeader(at: sectionIndex),
               let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: sectionHeaderType.cellType.self))
         else {
@@ -63,7 +63,6 @@ extension SummaryViewController: UITableViewDelegate {
 
         switch sectionHeaderType {
         case .dateless(let highlight), .dateful(let highlight):
-
             if let configurableCell = cell as? HighlightConfigurable {
                 configurableCell.configureWith(highlight: highlight)
             }

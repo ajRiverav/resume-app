@@ -12,8 +12,6 @@ protocol ExperienceCoordinated: AnyObject {
     var experienceCoordinator: ExperienceCoordinator? { get set }
 }
 
-// MARK: - SummaryCoordinator
-
 class ExperienceCoordinator {
     weak var parent: Coordinator?
 }
@@ -27,7 +25,6 @@ extension ExperienceCoordinator: Coordinator {
 
 extension ExperienceCoordinator {
     public func didSelectRow(_ viewController: ExperienceViewController, tableView: UITableView, indexPath: IndexPath) {
-
         guard let dataSource = tableView.dataSource as? ExperienceTableViewDataSource
         else { assertionFailure("nil value"); return }
 

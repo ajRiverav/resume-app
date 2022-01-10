@@ -19,7 +19,7 @@ protocol Localizable {
 
 extension String: Localizable {
     var localized: String {
-        // TODO: explain why comment is "". 
+        // No need to have a comment, hence the "". See param description. 
         let localizedString = NSLocalizedString(self, comment: "")
         return localizedString
     }

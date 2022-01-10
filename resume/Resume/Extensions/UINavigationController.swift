@@ -11,7 +11,7 @@ import UIKit
 extension UINavigationController {
     open override func awakeFromNib() {
         super.awakeFromNib()
-        configureNavBar()
+        configure()
     }
     /// Sets the tab bar item's title on the tab bar controller displaying this navigation controller.
     func setTabBarItemTitle(_ title: String) {
@@ -25,12 +25,12 @@ extension UINavigationController {
 }
 
 private extension UINavigationController {
-    private func configureNavBar() {
+    func configure() {
         setNavBarBackgroundColor()
         navigationBar.prefersLargeTitles = true
 
     }
-    private func setNavBarBackgroundColor(color: UIColor = .antiFlashWhite) {
+    func setNavBarBackgroundColor(color: UIColor = .antiFlashWhite) {
         navigationBar.backgroundColor = color
     }
 }

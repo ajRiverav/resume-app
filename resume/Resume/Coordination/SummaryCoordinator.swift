@@ -12,8 +12,6 @@ protocol SummaryCoordinated: AnyObject {
     var summaryCoordinator: SummaryCoordinator? { get set }
 }
 
-// MARK: - SummaryCoordinator
-
 class SummaryCoordinator {
     weak var parent: Coordinator?
 }

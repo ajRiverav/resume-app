@@ -11,6 +11,7 @@ import UIKit
 class EducationNavController: UINavigationController {
     override func awakeFromNib() {
         super.awakeFromNib()
+        // defaults
         setTabBarItemTitle(LocalizableString.education.localized)
         setTabBarItemImage(Icon.maleStudent.image)
     }

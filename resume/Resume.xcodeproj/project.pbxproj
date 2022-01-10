@@ -26,6 +26,8 @@
 		21362EBD278A600600A26778 /* EducationTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21362EBC278A600600A26778 /* EducationTableViewDataSource.swift */; };
 		21362EBF278A847700A26778 /* SummaryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21362EBE278A847700A26778 /* SummaryCoordinator.swift */; };
 		21362EC6278BEA8200A26778 /* ExperienceCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21362EC5278BEA8200A26778 /* ExperienceCoordinator.swift */; };
+		21362EC8278C81EE00A26778 /* UnixTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21362EC7278C81EE00A26778 /* UnixTime.swift */; };
+		21362ECA278C823F00A26778 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21362EC9278C823F00A26778 /* Language.swift */; };
 		21480F1A277E3340005D2907 /* SectionHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21480F18277E3340005D2907 /* SectionHeaderCell.xib */; };
 		21480F1B277E3340005D2907 /* SectionHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21480F19277E3340005D2907 /* SectionHeaderCell.swift */; };
 		21480F1D277E3704005D2907 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21480F1C277E3704005D2907 /* Icon.swift */; };
@@ -68,6 +70,8 @@
 		21362EBC278A600600A26778 /* EducationTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationTableViewDataSource.swift; sourceTree = "<group>"; };
 		21362EBE278A847700A26778 /* SummaryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryCoordinator.swift; sourceTree = "<group>"; };
 		21362EC5278BEA8200A26778 /* ExperienceCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceCoordinator.swift; sourceTree = "<group>"; };
+		21362EC7278C81EE00A26778 /* UnixTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnixTime.swift; sourceTree = "<group>"; };
+		21362EC9278C823F00A26778 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		21480F18277E3340005D2907 /* SectionHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SectionHeaderCell.xib; sourceTree = "<group>"; };
 		21480F19277E3340005D2907 /* SectionHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionHeaderCell.swift; sourceTree = "<group>"; };
 		21480F1C277E3704005D2907 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
@@ -195,6 +199,8 @@
 			isa = PBXGroup;
 			children = (
 				217A118E277BB6D0007977CC /* Models.swift */,
+				21362EC7278C81EE00A26778 /* UnixTime.swift */,
+				21362EC9278C823F00A26778 /* Language.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -419,6 +425,8 @@
 				21210391277E3DB70001D8B8 /* LocalizableString.swift in Sources */,
 				2121039B277E95B60001D8B8 /* SectionRowCell.swift in Sources */,
 				21D396AF277C8358007ECA78 /* RootCoordinator.swift in Sources */,
+				21362ECA278C823F00A26778 /* Language.swift in Sources */,
+				21362EC8278C81EE00A26778 /* UnixTime.swift in Sources */,
 				217A118F277BB6D0007977CC /* Models.swift in Sources */,
 				21362EBB2789F3AD00A26778 /* UIViewController.swift in Sources */,
 				21210393277E55780001D8B8 /* Data.swift in Sources */,
