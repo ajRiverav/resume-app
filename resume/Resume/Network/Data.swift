@@ -31,8 +31,8 @@ let experienceList: [Experience] = [
                emphasisList: [
                 Emphasis(title: "CompuMED is a startup focusing on the development of a proprietary home health management software."),
                 Emphasis(title: "Technical responsibilities: fullstack development with React and NodeJS + TypeScript, automated end-to-end test development with Cypress.io, frontend deployment with AWS CloudFront + S3, backend deployment with AWS Elastic Beanstalk, usability testing."),
-                Emphasis(title: "Administrative responsibilities: product management, proposal writing, employee management, company finances."),
-                Emphasis(title: "Accomplishments: Led a 4-member team in the development of v1.0 currently used by 1st paying customer (~40 users on the field and in offices using tablets and desktops).")
+                Emphasis(title: "Administrative responsibilities: proposal writing, employee management, company finances."),
+                Emphasis(title: "Led a 4-member team in the development of v1.0 currently used by 1st paying customer (~40 users on the field and in offices using tablets and desktops).")
                ]),
     // --------------------------------------------------------------------------------------------------------
     // --------------------------------------------------------------------------------------------------------
@@ -67,7 +67,7 @@ let experienceList: [Experience] = [
                             end: UnixTime.mar2015.toDate),
                emphasisList: [
                 Emphasis(title: "Conducting signal processing research and development for a variety of sonar applications. Sonars are used to search for and locate submarines."),
-                Emphasis(title: "Led a team of 4 engineers in the development, and verification and validation of a internal software tool that allows the U.S. government to conduct in-house, independent evaluations of new sonar algorithms before any significant investment of resources, time, and funding is made."),
+                Emphasis(title: "Led a team of 4 engineers in the development, and verification and validation of an internal software tool that allows the U.S. government to conduct in-house, independent evaluations of new sonar algorithms before any significant investment of resources, time, and funding is made."),
                 Emphasis(title: "Led a team of 6 engineers and scientists in the evaluation of a new signal processing algorithm using the internal tool above. Also, documented algorithm performance using Python code."),
                 Emphasis(title: "Received funding for a 2-year machine learning research project after writing proposal."),
                 Emphasis(title: "Served as a mentor for 2 new-hires in the areas of signal & information processing.")
@@ -106,8 +106,8 @@ let experienceList: [Experience] = [
                dates: Dates(start: UnixTime.year2016.toDate,
                             end: UnixTime.year2019.toDate),
                emphasisList: [
-                Emphasis(title: "Involved in the design and execution of the organization’s financial literacy pilot project, whose goal is to increase the financial knowledge of high-school students in Puerto Rico."),
-                Emphasis(title: "Developed and taught the Income and Investments modules to a group of 30 students.")
+                Emphasis(title: "Involved in the design and execution of the organization’s financial literacy pilot project. The goal was to increase the financial knowledge of high-school students in Puerto Rico.", webLink: .cenadores),
+                Emphasis(title: "Developed and taught the Income and Investments modules to a group of 30 students.", webLink: .cenadores)
                ])
 ]
 
