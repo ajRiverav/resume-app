@@ -9,6 +9,10 @@ import Foundation
 import UIKit
 
 extension UINavigationController {
+    open override func awakeFromNib() {
+        super.awakeFromNib()
+        configureNavBar()
+    }
     /// Sets the tab bar item's title on the tab bar controller displaying this navigation controller.
     func setTabBarItemTitle(_ title: String) {
         tabBarItem.title = title
@@ -18,14 +22,15 @@ extension UINavigationController {
     func setTabBarItemImage(_ image: UIImage?) {
         tabBarItem.image = image
     }
+}
 
-    // TODO: Hmm. Maybe we can move this override viewDidLoad here and call this? Calling this from every controller's viewDidLoad seems DRY.
-    func setNavBarBackgroundColor(color: UIColor = .antiFlashWhite) {
-        navigationBar.backgroundColor = color
-    }
-
-    override open func viewDidLoad() {
+private extension UINavigationController {
+    private func configureNavBar() {
+        setNavBarBackgroundColor()
         navigationBar.prefersLargeTitles = true
-        super.viewDidLoad()
+
+    }
+    private func setNavBarBackgroundColor(color: UIColor = .antiFlashWhite) {
+        navigationBar.backgroundColor = color
     }
 }

@@ -9,10 +9,9 @@ import Foundation
 import UIKit
 
 class ExperienceNavController: UINavigationController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func awakeFromNib() {
+        super.awakeFromNib()
         setTabBarItemTitle(LocalizableString.experience.localized)
         setTabBarItemImage(Icon.crane.image)
-        setNavBarBackgroundColor()
     }
 }

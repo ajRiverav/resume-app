@@ -9,10 +9,9 @@ import Foundation
 import UIKit
 
 class EducationNavController: UINavigationController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func awakeFromNib() {
+        super.awakeFromNib()
         setTabBarItemTitle(LocalizableString.education.localized)
         setTabBarItemImage(Icon.maleStudent.image)
-        setNavBarBackgroundColor()
     }
 }

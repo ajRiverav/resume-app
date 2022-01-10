@@ -9,10 +9,9 @@ import Foundation
 import UIKit
 
 class SummaryNavController: UINavigationController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func awakeFromNib() {
+        super.awakeFromNib()
         setTabBarItemTitle(LocalizableString.summary.localized)
         setTabBarItemImage(Icon.identificationCard.image)
-        setNavBarBackgroundColor()
     }
 }

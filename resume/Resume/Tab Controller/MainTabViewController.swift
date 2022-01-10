@@ -9,9 +9,4 @@ import UIKit
 
 class MainTabBarController: UITabBarController {
     weak var rootCoordinator: RootCoordinator?
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setTabBarBackgroundColor()
-    }
 }

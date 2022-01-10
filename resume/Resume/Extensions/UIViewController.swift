@@ -11,6 +11,6 @@ import UIKit
 extension UIViewController {
     /// Configure the title of the nav bar showing this vc.
     func configureNavBar(title: String) {
-        self.title = title
+        navigationItem.title = title
     }
 }
