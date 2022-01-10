@@ -13,22 +13,22 @@ import Foundation
 //
 
 struct Experience {
-    var position: String
-    var place: Place
-    var dates: Dates
-    var emphasisList: [Emphasis]
+    let position: String
+    let place: Place
+    let dates: Dates
+    let emphasisList: [Emphasis]
 }
 
 struct Education {
-    var place: Place
-    var degree: String
-    var dates: Dates
-    var emphasistList: [String]
+    let place: Place
+    let degree: String
+    let dates: Dates
+    let emphasistList: [String]
 }
 
 struct Emphasis {
-    var title: String
-    var webLink: WebLink?
+    let title: String
+    let webLink: WebLink?
 
     init(title: String, webLink: WebLink) {
         self.title = title
@@ -42,22 +42,22 @@ struct Emphasis {
 }
 
 struct Highlight {
-    var title: String
-    var emphasisList: [Emphasis]
+    let title: String
+    let emphasisList: [Emphasis]
 }
 
 struct Place {
-    var name: String
-    var address: Address
+    let name: String
+    let address: Address
 }
 
 struct Address {
-    var state: State
-    var city: City
+    let state: State
+    let city: City
 }
 
 struct Dates {
-    var start: Date
+    let start: Date
     // Optional because some experiences may not have end date as they are current.
-    var end: Date?
+    let end: Date?
 }
