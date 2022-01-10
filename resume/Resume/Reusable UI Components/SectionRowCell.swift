@@ -86,7 +86,6 @@ extension SectionRowCell: HighlightDetailsConfigurable {
         case .summary:
             viewModel = .init(icon: Icon.chevronRight.image,
                               title: highlightDetail)
-        default: return
         }
 
     }

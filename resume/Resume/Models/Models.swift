@@ -30,9 +30,9 @@ struct Emphasis {
     var title: String
     var link: WebLink?
 
-    init(title: String, link: WebLink) {
+    init(title: String, webLink: WebLink) {
         self.title = title
-        self.link = link
+        self.link = webLink
     }
 
     init(title: String) {
