@@ -14,7 +14,6 @@ class SummaryViewController: UIViewController, SummaryCoordinated {
 
     // Implementation
     weak var summaryCoordinator: SummaryCoordinator?
-
 }
 
 // MARK: - UIViewController
@@ -112,13 +111,11 @@ extension SummaryViewController.Section {
 
     enum RowType: CellTypeful {
         case summary
-        case link
 
         // Implementation
         var cellType: UITableViewCell.Type {
             switch self {
             case .summary: return SectionRowCell.self
-            case .link: return LinkCell.self
             }
         }
     }

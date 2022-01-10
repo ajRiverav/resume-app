@@ -36,8 +36,7 @@ extension SummaryCoordinator {
             guard let urlString = highlight.emphasisList[indexPath.row].link?.urlAsString,
                     let url = URL(string: urlString)
             else { return }
-
-            UIApplication.shared.openURL(url)
+            UIApplication.shared.open(url, options: [:])
         }
     }
 }

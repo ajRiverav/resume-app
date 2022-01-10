@@ -79,7 +79,7 @@ extension ExperienceTableViewDataSource {
                 var rows = [ExperienceViewController.Section.RowType]()
                 rows.append(.position)
                 rows.append(.location)
-                _ = experience.emphasisList.map {_ in rows.append(.highlight)}
+                _ = experience.emphasisList.map {_ in rows.append(.emphasis)}
 
                 sectionList.append(ExperienceViewController.Section.experience(header, rows))
             }

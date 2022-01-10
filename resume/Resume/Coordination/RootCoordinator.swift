@@ -20,10 +20,12 @@ protocol RootCoordinated: AnyObject {
 // MARK: - MainFlowCoordinator
 class RootCoordinator: NSObject {
     let summaryCoordinator = SummaryCoordinator()
+    let experienceCoordinator = ExperienceCoordinator()
 
     override init() {
         super.init()
         summaryCoordinator.parent = self
+        experienceCoordinator.parent = self
     }
 }
 
@@ -32,6 +34,7 @@ extension RootCoordinator: Coordinator {
     func configure(viewController: UIViewController) {
         (viewController as? RootCoordinated)?.rootCoordinator = self
         (viewController as? SummaryCoordinated)?.summaryCoordinator = summaryCoordinator
+        (viewController as? ExperienceCoordinated)?.experienceCoordinator = experienceCoordinator
 
         if let tabBarController = viewController as? UITabBarController {
             tabBarController.viewControllers?.forEach(configure(viewController:))

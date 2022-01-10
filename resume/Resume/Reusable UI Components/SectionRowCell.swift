@@ -70,7 +70,7 @@ extension SectionRowCell: ExperienceDetailsConfigurable {
                               title: "\(experience.place.address.city.displayString), \(experience.place.address.state.displayString)")
         case .position:
             viewModel = .init(icon: Icon.groupOfPeople.image, title: experience.position)
-        case .highlight:
+        case .emphasis:
             // TODO: Uuugh. Fix this -2 thing.
             viewModel = .init(icon: Icon.chevronRight.image,
                               title: experience.emphasisList[detailIndex-2].title,

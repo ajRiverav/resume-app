@@ -127,7 +127,7 @@ enum Link {
         case .github: return "https://github.com/ajriverav"
         case .gitlab: return "https://gitlab.com/ajriverav"
         case .resumeAppRepository: return "https://github.com/ajRiverav/resume-app"
-        case .appStoreApagonApp: return "https://apps.apple.com/us/app/apagón-app/id1362697139"
+        case .appStoreApagonApp: return "https://apple.co/3tb0mJm"
 
         }
     }

@@ -8,9 +8,12 @@
 import Foundation
 import UIKit
 
-class ExperienceViewController: UIViewController {
+class ExperienceViewController: UIViewController, ExperienceCoordinated {
     @IBOutlet private weak var tableView: UITableView!
     private var tableViewDataSource: ExperienceTableViewDataSource?
+
+    // Implementation
+    weak var experienceCoordinator: ExperienceCoordinator?
 }
 
 // MARK: - UIViewController
@@ -61,13 +64,16 @@ extension ExperienceViewController: UITableViewDelegate {
 
         switch sectionHeaderType {
         case .job(let experience), .extracurricular(let experience):
-
             if let configurableCell = cell as? ExperienceConfigurable {
                 configurableCell.configureWith(experience: experience)
             }
         }
 
         return cell.contentView
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        experienceCoordinator?.didSelectRow(self, tableView: tableView, indexPath: indexPath)
     }
 }
 
@@ -104,12 +110,12 @@ extension ExperienceViewController.Section {
     enum RowType: CellTypeful {
         case location
         case position
-        case highlight
+        case emphasis
 
         // Implementation
         var cellType: UITableViewCell.Type {
             switch self {
-            case .location, .position, .highlight: return SectionRowCell.self
+            case .location, .position, .emphasis: return SectionRowCell.self
             }
         }
     }
