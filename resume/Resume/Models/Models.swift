@@ -120,15 +120,19 @@ enum Link {
     case github
     case gitlab
     case resumeAppRepository
-    case appStoreApagonApp
+    case apagonApp
 
     var urlAsString: String {
         switch self {
         case .github: return "https://github.com/ajriverav"
         case .gitlab: return "https://gitlab.com/ajriverav"
         case .resumeAppRepository: return "https://github.com/ajRiverav/resume-app"
-        case .appStoreApagonApp: return "https://apple.co/3tb0mJm"
-
+        case .apagonApp:
+            #if targetEnvironment(simulator)
+            return "http://google.com/search?q=apagonapp+app+store&oq=apagonapp+app"
+            #else
+            return "https://apps.apple.com/app/apag%C3%B3n-app/id1362697139"
+            #endif
         }
     }
 }

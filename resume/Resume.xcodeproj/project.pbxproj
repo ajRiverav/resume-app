@@ -25,8 +25,6 @@
 		21362EBB2789F3AD00A26778 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21362EBA2789F3AD00A26778 /* UIViewController.swift */; };
 		21362EBD278A600600A26778 /* EducationTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21362EBC278A600600A26778 /* EducationTableViewDataSource.swift */; };
 		21362EBF278A847700A26778 /* SummaryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21362EBE278A847700A26778 /* SummaryCoordinator.swift */; };
-		21362EC1278BCEB300A26778 /* LinkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21362EC0278BCEB300A26778 /* LinkCell.xib */; };
-		21362EC4278BCFEE00A26778 /* LinkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21362EC3278BCFEE00A26778 /* LinkCell.swift */; };
 		21362EC6278BEA8200A26778 /* ExperienceCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21362EC5278BEA8200A26778 /* ExperienceCoordinator.swift */; };
 		21480F1A277E3340005D2907 /* SectionHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21480F18277E3340005D2907 /* SectionHeaderCell.xib */; };
 		21480F1B277E3340005D2907 /* SectionHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21480F19277E3340005D2907 /* SectionHeaderCell.swift */; };
@@ -69,8 +67,6 @@
 		21362EBA2789F3AD00A26778 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		21362EBC278A600600A26778 /* EducationTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationTableViewDataSource.swift; sourceTree = "<group>"; };
 		21362EBE278A847700A26778 /* SummaryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryCoordinator.swift; sourceTree = "<group>"; };
-		21362EC0278BCEB300A26778 /* LinkCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LinkCell.xib; sourceTree = "<group>"; };
-		21362EC3278BCFEE00A26778 /* LinkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkCell.swift; sourceTree = "<group>"; };
 		21362EC5278BEA8200A26778 /* ExperienceCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceCoordinator.swift; sourceTree = "<group>"; };
 		21480F18277E3340005D2907 /* SectionHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SectionHeaderCell.xib; sourceTree = "<group>"; };
 		21480F19277E3340005D2907 /* SectionHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionHeaderCell.swift; sourceTree = "<group>"; };
@@ -140,15 +136,6 @@
 				21362EB42789D14D00A26778 /* HighlightSectionHeaderCell.swift */,
 			);
 			path = "Highlight Section Header";
-			sourceTree = "<group>";
-		};
-		21362EC2278BCEBA00A26778 /* Link Cell */ = {
-			isa = PBXGroup;
-			children = (
-				21362EC0278BCEB300A26778 /* LinkCell.xib */,
-				21362EC3278BCFEE00A26778 /* LinkCell.swift */,
-			);
-			path = "Link Cell";
 			sourceTree = "<group>";
 		};
 		21480F1E277E3D22005D2907 /* Icons */ = {
@@ -303,7 +290,6 @@
 				21362EB12789D0FF00A26778 /* Highlight Section Header */,
 				21210397277E94CA0001D8B8 /* Section Row */,
 				21210396277E94BF0001D8B8 /* Section Header */,
-				21362EC2278BCEBA00A26778 /* Link Cell */,
 			);
 			path = "Reusable UI Components";
 			sourceTree = "<group>";
@@ -381,7 +367,6 @@
 				21362EB92789D2B800A26778 /* HighlightSectionHeaderCell.xib in Resources */,
 				21362EAC2788E2E600A26778 /* Summary.storyboard in Resources */,
 				211AE7A32780D62800BA1937 /* Education.storyboard in Resources */,
-				21362EC1278BCEB300A26778 /* LinkCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,7 +400,6 @@
 				21362EC6278BEA8200A26778 /* ExperienceCoordinator.swift in Sources */,
 				21D396B1277CDAD6007ECA78 /* ExperienceNavController.swift in Sources */,
 				21362EA52788A71500A26778 /* UIColor.swift in Sources */,
-				21362EC4278BCFEE00A26778 /* LinkCell.swift in Sources */,
 				217A117E277BB2A0007977CC /* MainTabViewController.swift in Sources */,
 				21480F1B277E3340005D2907 /* SectionHeaderCell.swift in Sources */,
 				211AE7A52780D65100BA1937 /* EducationViewController.swift in Sources */,
