@@ -129,7 +129,7 @@ let educationList: [Education] = [
 let highlightList: [Highlight] = [
     Highlight(title: "Summary",
               emphasisList: [
-                Emphasis(title: "Software engineer/data scientist with over 10 years of experience in scientific and web programming. Proven interest in finance. Firm believer in the Capital One brand: 11+ year customer since the ING Orange Account days.")]),
+                Emphasis(title: "Software engineer/data scientist with over 10 years of experience in scientific and web programming.")]),
     Highlight(title: "Programming Languages & Tools",
               emphasisList: [
                 Emphasis(title: "Web Programming: Swift/iOS (UIKit, WebKit), React-Native (iOS), React, NodeJS+Typescript, GraphQL."),
