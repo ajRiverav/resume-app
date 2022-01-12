@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension UITabBarController {w
+extension UITabBarController {
     override open func awakeFromNib() {
         super.awakeFromNib()
         configure()
